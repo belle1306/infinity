@@ -21,3 +21,19 @@
 .App-link {
   color: #61dafb;
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: black;
+  overflow: hidden;
+}
+
+html, body {
+  position:  fixed;
+}
+
+canvas {
+  vertical-align: bottom;
+}

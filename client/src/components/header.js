@@ -10,15 +10,15 @@ export default function Header() {
             <li className='discover'>
               <a href='/'>discover</a>
             </li>
-            {/* <li>
+            <li>
               <a href='/'>Planets</a>
             </li>
             <li>
-              <a href='/'>About Us</a>
+              <a href='/'>Latest from NASA</a>
             </li>
             <li>
-              <a href='/'>Contact Us</a>
-            </li> */}
+              <a href='/'>Send message</a>
+            </li>
             <li className='btn'>
               <a href='/'>Log In</a>
             </li>

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -14,10 +15,20 @@ export default function Header() {
               <a href='/'>Planets</a>
             </li>
             <li>
-              <a href='/'>Latest from NASA</a>
+              <a href='/news'>Latest from NASA</a>
             </li>
             <li>
-              <a href='/'>Send message</a>
+            {/* <div>
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/message"
+            >
+              Send message
+            </NavLink>
+            </div> */}
+              <a href='/message'>Send message</a>
+              {/* <Link to="/message">Message</Link> */}
             </li>
             <li className='btn'>
               <a href='/'>Log In</a>

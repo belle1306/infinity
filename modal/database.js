@@ -20,14 +20,17 @@ con.connect(function(err) {
 
   // let sql = "DROP TABLE IF exists items; CREATE TABLE items(id INT NOT NULL AUTO_INCREMENT, text VARCHAR(40) not null, complete BOOLEAN, PRIMARY KEY (id)); "; // change this too
   let sql = 
-  "DROP database IF exists makanbahDB; create database makanbahDB; use makanbahDB;"
-  + "CREATE TABLE `restaurants` (`id` INT(25) NOT NULL AUTO_INCREMENT,`name` varchar(50) NOT NULL,`formatted_address` varchar(255) NOT NULL,`rating` varchar(50) NOT NULL,PRIMARY KEY (`id`));"
-  + "CREATE TABLE `bucket_list` (`id` INT(25) NOT NULL AUTO_INCREMENT,`restaurant_id` INT(25) NOT NULL,`complete` BOOLEAN NOT NULL,PRIMARY KEY (`id`));"
-  + "CREATE TABLE `user` (`id` INT(25) NOT NULL AUTO_INCREMENT,`bucket_list_id` INT(25) NOT NULL,`firstName` varchar(255) NOT NULL,`lastName` varchar(255) NOT NULL,`email` varchar(255) NOT NULL,PRIMARY KEY (`id`));"
-  + "ALTER TABLE `bucket_list` ADD CONSTRAINT `bucket_list_fk0` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants`(`id`);";
+  "DROP database IF exists infinity; create database infinity; use infinity;"
+  + "CREATE TABLE `login` (`id` INT(255) NOT NULL AUTO_INCREMENT,`username` varchar(50) NOT NULL,`password` varchar(20) NOT NULL,`email` varchar(20) NOT NULL,PRIMARY KEY (`id`));"
+  + "CREATE TABLE `planet` (`id` INT(255) NOT NULL AUTO_INCREMENT,`name` varchar(255) NOT NULL,`descriptions` varchar(255) NOT NULL,`distance_to_orbit` varchar(255) NOT NULL,`distance_to_sun` varchar(255) NOT NULL,`login_id` INT(255) NOT NULL,PRIMARY KEY (`id`));"
+  + "CREATE TABLE `message` (`id` INT(255) NOT NULL AUTO_INCREMENT,`login_id` INT(255) NOT NULL,`planet_id` INT NOT NULL,`text` varchar(255) NOT NULL,PRIMARY KEY (`id`));"
+  + "ALTER TABLE `planet` ADD CONSTRAINT `planet_fk0` FOREIGN KEY (`login_id`) REFERENCES `login`(`id`);"
+  + "ALTER TABLE `message` ADD CONSTRAINT `message_fk0` FOREIGN KEY (`login_id`) REFERENCES `login`(`id`);"
+  + "ALTER TABLE `message` ADD CONSTRAINT `message_fk1` FOREIGN KEY (`planet_id`) REFERENCES `planet`(`id`);";
+    
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Tables creation `makanbahDB` db were successful!");
+    console.log("Tables creation `infinity` db were successful!");
 
     console.log("Closing...");
   });
@@ -36,10 +39,9 @@ con.connect(function(err) {
 });
 
 
-// + "CREATE TABLE `restaurants` (`id` INT(25) NOT NULL AUTO_INCREMENT,`name` varchar(50) NOT NULL,`address` varchar(50) NOT NULL,`city` varchar(50) NOT NULL,`state` varchar(50) NOT NULL,`country` varchar(50) NOT NULL,`ratings` varchar(50) NOT NULL,`opening hours` varchar(50) NOT NULL,`api_reviews` varchar(100) NOT NULL,`type_id` INT(25) NOT NULL,PRIMARY KEY (`id`));";
-//   + "CREATE TABLE `bucket_list` (`id` INT(25) NOT NULL AUTO_INCREMENT,`restaurant_id` INT(25) NOT NULL,`complete` BOOLEAN NOT NULL,`user_review` varchar(100) NOT NULL,PRIMARY KEY (`id`));";
-//   + "CREATE TABLE `type` (`id` INT(25) NOT NULL AUTO_INCREMENT,`breakfast` varchar(100) NOT NULL,`lunch` varchar(100) NOT NULL,`dinner` varchar(100) NOT NULL,PRIMARY KEY (`id`));";
-//   + "CREATE TABLE `user` (`id` INT(25) NOT NULL AUTO_INCREMENT,`bucket_list_id` INT(25) NOT NULL,PRIMARY KEY (`id`));";
-//   + "ALTER TABLE `restaurants` ADD CONSTRAINT `restaurants_fk0` FOREIGN KEY (`type_id`) REFERENCES `type`(`id`);";
-//   + "ALTER TABLE `bucket_list` ADD CONSTRAINT `bucket_list_fk0` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants`(`id`);";
-//   + "ALTER TABLE `user` ADD CONSTRAINT `user_fk0` FOREIGN KEY (`bucket_list_id`) REFERENCES `bucket_list`(`id`);";
+// + "CREATE TABLE `login` (`id` INT(255) NOT NULL AUTO_INCREMENT,`username` varchar(50) NOT NULL,`password` varchar(20) NOT NULL,`email` varchar(20) NOT NULL,PRIMARY KEY (`id`));"
+// + "CREATE TABLE `planet` (`id` INT(255) NOT NULL AUTO_INCREMENT,`name` varchar(255) NOT NULL,`descriptions` varchar(255) NOT NULL,`distance_to_orbit` varchar(255) NOT NULL,`distance_to_sun` varchar(255) NOT NULL,`login_id` INT(255) NOT NULL,PRIMARY KEY (`id`));"
+// + "CREATE TABLE `message` (`id` INT(255) NOT NULL AUTO_INCREMENT,`login_id` INT(255) NOT NULL,`planet_id` INT NOT NULL,`text` varchar(255) NOT NULL,PRIMARY KEY (`id`));"
+// + "ALTER TABLE `planet` ADD CONSTRAINT `planet_fk0` FOREIGN KEY (`login_id`) REFERENCES `login`(`id`);"
+// + "ALTER TABLE `message` ADD CONSTRAINT `message_fk0` FOREIGN KEY (`login_id`) REFERENCES `login`(`id`);"
+// + "ALTER TABLE `message` ADD CONSTRAINT `message_fk1` FOREIGN KEY (`planet_id`) REFERENCES `planet`(`id`);";

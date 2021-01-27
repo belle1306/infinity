@@ -24,7 +24,7 @@ OUR PRODUCT: helps make learning more fun and multisensory
 ## Database Schema and API
 
 - User flow diagram (optional design tool)
-- Database schema (optional design tool)
+- Database schema ![DB Schema](infinity-schema.png)
 - API routes plan (optional template doc)
 - Full stack architecture drawing
 

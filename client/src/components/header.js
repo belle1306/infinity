@@ -15,7 +15,7 @@ export default function Header() {
               <a href='/'>Planets</a>
             </li>
             <li>
-              <a href='/news'>Latest from NASA</a>
+              <a href='/apod'>Latest from NASA</a>
             </li>
             <li>
             {/* <div>

@@ -9,10 +9,10 @@ export default function Header() {
         <nav>
           <ul>
             <li className='discover'>
-              <a href='/'>discover</a>
+              <a href='/discover'>discover</a>
             </li>
             <li>
-              <a href='/'>Planets</a>
+              <a href='/planets'>Planets</a>
             </li>
             <li>
               <a href='/news'>Latest from NASA</a>

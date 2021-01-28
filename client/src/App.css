@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -75,7 +75,7 @@ nav a {
   color: #fff;
   font-weight: 600;
   /* background: #23232a; */
-  padding: 16px 24px;
+  /* padding: 16px 24px;
   padding-top: 45px;
   border-radius: 10px;
 }
@@ -121,7 +121,7 @@ a {
   } */
 
 
-.loading {
+/* .loading {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -143,4 +143,129 @@ a {
 .loading-bar {
   height: 32px;
   background: #ffffff;
+} */
+
+/* ========================================= */
+/* =============== HOME PAGE =============== */
+/* ========================================= */
+
+.homeContainer {
+  text-align: center;
+  /* background-color: rgb(35, 147, 182); */
+  /* background-image: url('/images/spacebackground.jpg'); */
+  position: absolute;
+  background-size: cover;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.particles {
+  position:fixed !important;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
+/* ========================================= */
+/* =============== WISH FORM =============== */
+/* ========================================= */
+
+#messageForm {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: pink;
+  /* background: url('./images/starfield.png') no-repeat fixed; */
+  background-size: 40% cover;
+}
+
+#messageForm h1 {
+  text-align: center;
+}
+
+#messageForm form {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#messageForm p {
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  justify-content: center;
+  padding: 2rem 0 2rem 0;
+}
+
+.form-group {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LEFT COLUMN OF FORM */
+#messageForm label {
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+  /* border: 3px solid red; */
+  width: 30%;
+  text-align: center;
+}
+
+/* RIGHT COLUMN OF FORM */
+.form-inputs {
+  width: 70%;
+  /* border: 3px solid blue; */
+}
+
+input,
+textarea {
+  height: 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 10rem;
+}
+
+/* ========================================= */
+/* ================= message ================== */
+/* ========================================= */
+
+#message {
+  color: white;
+  background: none;
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+#message p {
+  line-height: 1.4rem;
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+  font-size: 0.9rem;
+}
+
+#charLimit {
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.5rem;
+}
+
+#messageButton {
+  width: 100%;
+  margin-top: 2rem;
 }

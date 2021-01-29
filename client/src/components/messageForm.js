@@ -121,6 +121,7 @@ class messageForm extends Component {
                                 />
                                 <span id="charLimit">(150 characters limit)</span>
                                 <button 
+                                    className="btn btn-dark btn-lg btn-block"
                                     id="messageButton" 
                                     type="submit"
                                     onClick={e => this.submitMessage()}
@@ -138,46 +139,3 @@ class messageForm extends Component {
 
 export default messageForm;
 
-// pages/messageView.js
-// const messageView = () => (
-//     <div>
-//         <form>
-//             <h3>What would you like to say to the aliens?</h3>
-//                 <div className="form-group">
-//                     <label>What's your name?</label>
-//                     <input type="text" className="form-control" placeholder="Name" />
-//                 </div>
-//                 <div className="form-group">
-//                     <label>What's your message?</label>
-//                  <input type="text" className="form-control" placeholder="Message" />
-//                  </div>
-//                 <button type="submit" className="btn btn-dark btn-lg btn-block">Submit</button>
-//         </form>
-//     </div>
-// );
-
-// export default messageView;
-
-
-// this also same like above
-// export default class messageView extends Component {
-//     render() {
-//         return (
-//             <form>
-//                 <h3>What would you like to say to the aliens?</h3>
-
-//                 <div className="form-group">
-//                     <label>What's your name?</label>
-//                     <input type="text" className="form-control" placeholder="Name" />
-//                 </div>
-
-//                 <div className="form-group">
-//                     <label>What's your message?</label>
-//                     <input type="text" className="form-control" placeholder="Message" />
-//                 </div>
-
-//                 <button type="submit" className="btn btn-dark btn-lg btn-block">Submit</button>
-//             </form>
-//         );
-//     }
-// }

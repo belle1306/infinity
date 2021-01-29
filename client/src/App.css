@@ -230,3 +230,12 @@ textarea {
   width: 100%;
   margin-top: 2rem;
 }
+
+
+.drop-down {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}

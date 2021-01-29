@@ -12,7 +12,7 @@ export default function Header() {
               <a href='/'>discover</a>
             </li>
             <li>
-              <a href='/'>Planets</a>
+              <a href='/solarscope'>Planets</a>
             </li>
             <li>
               <a href='/apod'>Latest from NASA</a>

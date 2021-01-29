@@ -4,6 +4,7 @@ import { Route, Switch} from 'react-router-dom'; //deleted withRouter, BrowserRo
 import Home from './components/Home';
 import messageForm from './components/messageForm';
 import APOD from './components/apod';
+import solarscope from './components/solarscope';
 
 
 class Routes extends Component {
@@ -13,7 +14,7 @@ class Routes extends Component {
                 <Route path="/home" component={Home} />
                 <Route path="/message" component={messageForm} />
                 <Route path="/apod" component={APOD} />
-                {/* <Route path="/log-in" component={LogIn} /> */}
+                <Route path="/solarscope" component={solarscope} />
                 <Route path="/" component={Home} />
             </Switch>
         )

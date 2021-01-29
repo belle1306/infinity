@@ -11,22 +11,13 @@ export default function Header() {
             <li className='discover'>
               <a href='/discover'>discover</a>
             </li>
-            <li>
+            <li className='planets'>
               <a href='/planets'>Planets</a>
             </li>
-            <li>
+            <li className='nasa'>
               <a href='/news'>Latest from NASA</a>
             </li>
             <li>
-            {/* <div>
-            <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/message"
-            >
-              Send message
-            </NavLink>
-            </div> */}
               <a href='/message'>Send message</a>
               {/* <Link to="/message">Message</Link> */}
             </li>

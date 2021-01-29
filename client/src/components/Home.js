@@ -5,8 +5,8 @@ import Header from "../components/header";
 const Home = () => {
     return(
         <div>
-            <ParticlesHome />
             <Header />
+            <ParticlesHome />
             <h1>Hello</h1>
         </div>
     )

@@ -89,12 +89,13 @@ class messageForm extends Component {
         return (
             <div>
                 <div id="messageForm">
-                    <MessagePlanet />
                     <h1>Send a message to the aliens</h1>
                         <form onSubmit={this.submitMessage}> 
                         <p>
                         Do they exist? It's time to find out yourself 
-                        </p> 
+                        </p>
+                        <MessagePlanet /> 
+                        <br />
                         <div className="form-group">
                             <label htmlFor="your name">Your name</label>
                             <div className="form-inputs">
@@ -109,7 +110,7 @@ class messageForm extends Component {
                         <br />
             
                         <div className="form-group">
-                            <label htmlFor="your message">your message</label>
+                            <label htmlFor="your message">Your message</label>
                             <div className="form-inputs">
                                 <textarea
                                 value={this.state.message}

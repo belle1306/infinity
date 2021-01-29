@@ -8,12 +8,11 @@ import {Animated} from 'react-animated-css'
 const ParticlesHome = () => {
     return (
     <div className="homeContainer">
-        <Header />
         <Particles className="particles"
         params={{
             "particles": {
                 "number": {
-                    "value": 150
+                    "value": 100
                 },
                 "size": {
                     "value": 2.5

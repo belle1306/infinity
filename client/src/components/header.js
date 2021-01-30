@@ -11,12 +11,7 @@ export default function Header() {
             <li className='discover'>
               <a href='/discover'>discover</a>
             </li>
-            <li className='planets'>
-              <a href='/planets'>Planets</a>
-            </li>
-            <li className='nasa'>
-              <a href='/news'>Latest from NASA</a>
-            </li>
+            
             <li>
               <a href='/message'>Send message</a>
               {/* <Link to="/message">Message</Link> */}

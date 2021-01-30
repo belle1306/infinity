@@ -1,11 +1,11 @@
 // import React, { useRef, useEffect, useState, Suspense } from "react";
-// import "./App.css";
+// import "../App.css";
 // //Components
-// import Header from "./components/header";
-// import { Section } from "./components/section";
+// import Header from "../components/header";
+// import { Section } from "../components/section";
 
 // // Page State
-// import state from "./components/state";
+// import state from "../components/state";
 
 // // Infini3
 // // npm install three react-three-fiber
@@ -19,9 +19,9 @@
 // import { useInView } from "react-intersection-observer";
 
 // // React-router
-// import Routes from "./routes";
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-// import messageForm from "./components/messageForm.js";
+// // import Routes from "./routes";
+// // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// // import messageForm from "./components/messageForm.js";
 
 // function Model({ url }) {
 //   const gltf = useGLTF(url, true);
@@ -107,7 +107,7 @@
 // //   { path: "/message", name: "Message", Component: messageForm }
 // // ];
 
-// export default function App() {
+// const Home = () => {
 //   const [events, setEvents] = useState();
 //   const domContent = useRef();
 //   const scrollArea = useRef();
@@ -122,9 +122,9 @@
 //         <messageForm/>
 //       </Route>
 //       </div> */}
-//       <div>
+//       {/* <div>
 //         <Routes />
-//       </div>
+//       </div> */}
 //       {/* Infinity Canvas */}
 //       <Canvas
 //         concurrent
@@ -164,3 +164,5 @@
 //     </>
 //   );
 // }
+
+// export default Home;

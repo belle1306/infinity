@@ -14,12 +14,10 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById("root")
 );
-<<<<<<< HEAD
 serviceWorker.unregister();
 // reportWebVitals();
-=======
 
-reportWebVitals();
+// reportWebVitals();
 
 // import React from "react";
 // import ReactDOM from "react-dom";
@@ -53,4 +51,3 @@ reportWebVitals();
 
 // const rootElement = document.getElementById("root");
 // ReactDOM.render(<App />, rootElement);
->>>>>>> 376a65bb4319897cbbc95d95267cfbf15f3bfc87

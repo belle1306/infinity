@@ -9,7 +9,7 @@ export default function Header() {
         <nav>
           <ul>
             <li className='discover'>
-              <a href='/discover'>discover</a>
+              <a href='/game'>discover</a>
             </li>
             
             <li>

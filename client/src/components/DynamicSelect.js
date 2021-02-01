@@ -24,10 +24,12 @@ class DynamicSelect extends Component{
             );
         
             return (
-            <select name="customSearch" className="custom-search-select" onChange={this.handleChange}>
-                <option>Select Item</option>
-                {options}
-           </select>
+                <div>
+                    <select name="customSearch" className="custom-search-select" onChange={this.handleChange}>
+                        <option>Select Item</option>
+                        {options} 
+                    </select>
+                </div>
         )
     }
 }

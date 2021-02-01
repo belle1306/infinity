@@ -154,11 +154,13 @@ class MessagePlanet extends Component {
       <div className="App">
         <div>
         <div className="drop-down">
+          <div className="drop-intro">
           <h3>Select your planet!</h3>
           <DynamicSelect planetsList={planetsList} onSelectChange={this.handleSelectChange} /> <br /><br />
           {/* <div>
             Selected value: {this.state.selectedValue}
           </div> */}
+          </div>
         </div>
       </div>
       </div>

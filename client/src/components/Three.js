@@ -94,7 +94,9 @@ export default function ThreeHome() {
       <header>
       <a href='/game' className="top-left" children="Discover" />
       <a href="/message" className="top-right" children="Send Message" />
-      {/* <a href="https://github.com/drcmda/react-three-fiber" className="bottom-left" children="+ react-three-fiber" /> */}
+      <a href="/apod" className="bottom-left" children="APOD" />
+      <a href="/solarscope" className="bottom-right" children="Solarscope" />
+
       </header>
     </>
   )

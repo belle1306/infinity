@@ -4,14 +4,11 @@ import ReactDOM from "react-dom";
 // import "./styles.css";
 
 const demos = {
-  soundcloud:
-    '<iframe src="https://www.solarsystemscope.com/iframe" width="1000" height="800" style="min-width:500px; min-height: 400px; border: 2px solid #0f5c6e;"/>'
+  solar:
+    '<iframe src="https://www.solarsystemscope.com/iframe" item-align="center" width="1300" height="590" style="min-width:500px; min-height: 400px; border: 2px solid #0f5c6e;"/>'
 
-  // plotly:
-  //   '<iframe src="https://www.solarsystemscope.com/iframe" width="500" height="400" style="min-width:500px; min-height: 400px; border: 2px solid #0f5c6e;"/>'
 };
 
-//codesandbox.io/s/react-iframe-demo-g3vst codePen =
 function Iframe(props) {
   return (
     <div
@@ -23,8 +20,8 @@ function Iframe(props) {
 function solarscope() {
   return (
     <div className="App">
-      <h1>Lets start exploring</h1>
-      <Iframe iframe={demos["soundcloud"]} allow="autoplay" />,
+      {/* <h1>Lets start exploring</h1> */}
+      <Iframe iframe={demos["solar"]} allow="autoplay" />,
     </div>
   );
 }

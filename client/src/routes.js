@@ -5,6 +5,7 @@ import Home from './components/Home';
 import messageForm from './components/messageForm';
 import APOD from './components/apod';
 import solarscope from './components/solarscope';
+import Quiz from './components/quiz';
 
 
 class Routes extends Component {
@@ -15,7 +16,9 @@ class Routes extends Component {
                 <Route path="/message" component={messageForm} />
                 <Route path="/apod" component={APOD} />
                 <Route path="/solarscope" component={solarscope} />
+                <Route path="/quiz" component={Quiz} />
                 <Route path="/" component={Home} />
+                
             </Switch>
         )
     }

@@ -9,26 +9,20 @@ export default function Header() {
         <nav>
           <ul>
             <li className='discover'>
-              <a href='/'>discover</a>
+              <a href='/discover'>discover</a>
+            </li>
+            <li className='solarscope'>
+              <a href='/solarscope'>Explore Solar System</a>
+            </li>
+            <li className='apod'>
+              <a href='/apod'>Your astronomical birthday</a>
             </li>
             <li>
-              <a href='/solarscope'>Planets</a>
-            </li>
-            <li>
-              <a href='/apod'>Latest from NASA</a>
-            </li>
-            <li>
-            {/* <div>
-            <NavLink
-              className="navbar-item"
-              activeClassName="is-active"
-              to="/message"
-            >
-              Send message
-            </NavLink>
-            </div> */}
               <a href='/message'>Send message</a>
               {/* <Link to="/message">Message</Link> */}
+            </li>
+            <li className='quiz'>
+              <a href='/quiz'>Astronomical Quiz</a>
             </li>
             <li className='btn'>
               <a href='/'>Log In</a>

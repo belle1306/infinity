@@ -411,3 +411,30 @@ textarea {
 .drop-intro {
   font-size: large;
 }
+
+/* ========================================= */
+/* ================= messageSelect ================== */
+/* ========================================= */
+
+.dd-wrapper{
+  width: 30%;
+  margin: 10% auto;
+}
+
+.dd-header{
+  border: 1px solid lightblue;
+  padding: 10px;
+}
+
+.dd-list{
+  border: 1px solid lightblue;
+  border-top: none;
+  margin-top: 0%;
+  list-style: none;
+  text-align: center;
+  padding: 10px
+}
+
+.dd-list-item{
+  padding: 10px;
+}

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 // import {connect} from 'react-redux'
 import { Route, Switch} from 'react-router-dom'; //deleted withRouter, BrowserRouter,
-import messageForm from './components/messageForm';
+import MessageForm from './components/messageForm';
+import ThreeHome from './components/Three';
 import APOD from './components/apod';
 import solarscope from './components/solarscope';
 
@@ -11,7 +12,7 @@ class Routes extends Component {
         return (
             <Switch>
                 <Route path="/home" component={ThreeHome} />
-                <Route path="/message" component={messageForm} />
+                <Route path="/message" component={MessageForm} />
                 <Route path="/apod" component={APOD} />
                 <Route path="/solarscope" component={solarscope} />
                 <Route path="/" component={ThreeHome} />

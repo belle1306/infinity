@@ -438,3 +438,46 @@ textarea {
 .dd-list-item{
   padding: 10px;
 }
+
+/* ========================================= */
+/* ================= messageSubmitted ================== */
+/* ========================================= */
+
+#messageSubmitted {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+}
+/* 
+#messageSubmittedText {
+  display: flex;
+  width: 70vw;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0 2rem 0 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} */
+
+h2 {
+  color: white;
+}
+
+p {
+  line-height: 1.5;
+  color: white;
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+}
+
+#submittedButton {
+  align-items: center;
+}

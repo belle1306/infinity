@@ -2,7 +2,9 @@
 import React, { Component } from "react";
 // import MessagePlanet from "../components/messagePlanet";
 // import DynamicSelect from './DynamicSelect';
-import SelectPlanet from "../components/Dropdown";
+// import SelectPlanet from "../components/Dropdown";
+import MessageSubmitted from "../components/messageSubmitted";
+
 
 // const planetsList = [
 //     {id: '1', name: 'Mercury'},
@@ -91,6 +93,11 @@ class MessageForm extends Component {
 
     // submit message
     submitMessage() {
+        this.setState({
+            value: "",
+            input: "",
+            submitted: true
+        })
         alert("Message received!");
         console.log(this.state.value);
         fetch("/users/message", {
@@ -130,7 +137,9 @@ class MessageForm extends Component {
 
     render() {
         const {value, options} = this.state;
-        return (
+        return this.state.submitted ? (
+            <MessageSubmitted />
+        ) : (
             <div>
                 <div id="messageForm">
                     <h2>Send a message to the aliens</h2>

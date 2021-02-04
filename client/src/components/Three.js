@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import React, { Suspense, useState, useEffect } from 'react';
-import { Canvas, useLoader } from 'react-three-fiber';
+import { Canvas } from 'react-three-fiber';
 import { useTransition, a } from 'react-spring';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls, useGLTF } from '@react-three/drei';
@@ -89,7 +89,7 @@ export default function ThreeHome() {
           minPolarAngle={Math.PI / 2}
         />
       </Canvas>
-      <div className="layer" />
+      {/* <div className="layer" /> */}
       <Loading />
       <header>
       <a href='/game' className="top-left" children="Discover" />

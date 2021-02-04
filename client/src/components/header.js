@@ -8,15 +8,11 @@ export default function Header() {
         <div className='logo'>Infinity.</div>
         <nav>
           <ul>
-            {/* <li className='Quiz'>
-              <a href='/Quiz'>Quiz</a>
-            </li> */}
             <li className='solarscope'>
               <a href='/solarscope'>Explore Solar System</a>
             </li>
             <li className='apod'>
               <a href='/apod'>Your astronomical birthday</a>
-            </li>
             <li>
               <a href='/message'>Send message</a>
               {/* <Link to="/message">Message</Link> */}

@@ -92,11 +92,11 @@ export default function ThreeHome() {
       {/* <div className="layer" /> */}
       <Loading />
       <header>
-      <a href='/game' className="top-left" children="Discover" />
+      <a href='/Quiz' className="top-left" children="Quiz" />
       <a href="/message" className="top-right" children="Send Message" />
       <a href="/apod" className="bottom-left" children="APOD" />
       <a href="/solarscope" className="bottom-right" children="Solarscope" />
-
+      
       </header>
     </>
   )

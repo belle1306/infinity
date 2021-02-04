@@ -70,7 +70,11 @@ li {
   padding-top: 45px;
   border-radius: 10px;
 } */
+<<<<<<< HEAD
+
+=======
 /*
+>>>>>>> 7e5cf2a4a6f868866c2300aa525cba7bcb9c6638
 a {
   text-transform: capitalize;
   text-decoration: none;
@@ -311,10 +315,16 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
+<<<<<<< HEAD
+  background-color: pink;
+  /* background: url('./images/starfield.png') no-repeat fixed; */
+  background-size: 40% cover;
+=======
   /* background-color: pink; */
   /* background-image: url("../src/dark-starfield.jpg"); */
   /* background-image: url('mercury.png') no-repeat fixed; */
   /* background-size: 40% cover; */
+>>>>>>> 7e5cf2a4a6f868866c2300aa525cba7bcb9c6638
 }
 
 #messageForm h1 {
@@ -323,6 +333,11 @@ a {
 
 #messageForm form {
   width: 70vw;
+<<<<<<< HEAD
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+=======
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -464,8 +479,52 @@ textarea {
   font-size: 0.8rem;
   text-align: center;
   padding: 0 2rem 0 2rem;
+>>>>>>> 7e5cf2a4a6f868866c2300aa525cba7bcb9c6638
   align-items: center;
+}
+
+#messageForm p {
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.9rem;
   justify-content: center;
+  padding: 2rem 0 2rem 0;
+}
+
+.form-group {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+<<<<<<< HEAD
+  align-items: center;
+}
+
+/* LEFT COLUMN OF FORM */
+#messageForm label {
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+  /* border: 3px solid red; */
+  width: 30%;
+  text-align: center;
+}
+
+/* RIGHT COLUMN OF FORM */
+.form-inputs {
+  width: 70%;
+  /* border: 3px solid blue; */
+}
+
+input,
+textarea {
+  height: 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 10rem;
+=======
   flex-direction: column;
 } */
 
@@ -483,4 +542,40 @@ p {
   align-items: center;
   justify-content: center;
   
+>>>>>>> 7e5cf2a4a6f868866c2300aa525cba7bcb9c6638
+}
+
+/* ========================================= */
+/* ================= message ================== */
+/* ========================================= */
+
+#message {
+  color: white;
+  background: none;
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+#message p {
+  line-height: 1.4rem;
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+  font-size: 0.9rem;
+}
+
+#charLimit {
+  font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.5rem;
+}
+
+#messageButton {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.quiz{
+  text-align: center;
+
+
 }

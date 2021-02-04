@@ -45,8 +45,9 @@ class APOD extends React.Component {
         const element = this.state.resource_type === 'image' ? <img width="560" height="315" src={ this.state.uri } alt="Apod pic"/> : <iframe title="APOD Pic" width="560" height="315" src={ this.state.uri } frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>;
         
         return(
+            
             <div style={{margin: 15 + "px"}}>
-                <p>Get an astro resource from the NASA API!</p>
+                <h1>Lets checkout the astronomical event that took place on your last birthday!</h1>
                 <DatePicker selected={this.state.date} onChange={ date => this.handleDateChange(date) } maxDate={new Date()} />
                 <button onClick={ () => this.handleAPICall() }>
                     Get resource

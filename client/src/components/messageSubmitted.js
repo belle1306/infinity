@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+import React from "react";
+import {Link} from "react-router-dom";
+
+export const messageSubmitted = () => {
+    <div id="messageSubmitted">
+        <h1>⏁⊑⏃⋏☍ ⊬⍜⎍</h1>
+        <h2>It means thank you in alien language!</h2>
+        <br/>
+        <p>Your message is on its way to the aliens!</p>
+
+        <Link to="/Home">
+            <button 
+            id="messageButton"
+            type="submit">
+            </button>
+        </Link>
+    </div>
+}
+=======
 // import React from "react";
 import {Link} from "react-router-dom";
 import React, { Component } from "react";
@@ -48,3 +68,4 @@ class MessageSubmitted extends Component {
 }
 
 export default MessageSubmitted;
+>>>>>>> 7e5cf2a4a6f868866c2300aa525cba7bcb9c6638

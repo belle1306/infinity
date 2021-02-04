@@ -9,6 +9,7 @@ export default function Header() {
         <nav>
           <ul>
             <li className='discover'>
+<<<<<<< HEAD
               <a href='/discover'>discover</a>
             </li>
             <li className='solarscope'>
@@ -17,6 +18,11 @@ export default function Header() {
             <li className='apod'>
               <a href='/apod'>Your astronomical birthday</a>
             </li>
+=======
+              <a href='/game'>discover</a>
+            </li>
+            
+>>>>>>> 7e5cf2a4a6f868866c2300aa525cba7bcb9c6638
             <li>
               <a href='/message'>Send message</a>
               {/* <Link to="/message">Message</Link> */}

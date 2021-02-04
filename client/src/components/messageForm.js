@@ -1,9 +1,17 @@
-// import { json } from "express";
 import React, { Component } from "react";
-// import MessagePlanet from "../components/messagePlanet";
-// import DynamicSelect from './DynamicSelect';
-// import SelectPlanet from "../components/Dropdown";
 import MessageSubmitted from "../components/messageSubmitted";
+// import Particles from 'react-particles-js'
+
+// const particleOpt = {
+//     particles: {
+//         number: {
+//             value: 150,
+//             density: {
+//             enable: true
+//             }
+//         }
+//     }
+// }
 
 
 // const planetsList = [
@@ -115,18 +123,18 @@ class MessageForm extends Component {
             // this.componentDidMount();
             alert("Submitted");
         })
-        .then(data => {
-            //console.log("data with id", data);
-            const updatedMessage = [
-              {
-                id: data.insertID,
-                message: this.state.input,
-                planet_id: this.state.value
-              }
-            ];
-            this.setstate({ message: [...this.state.message, ...updatedMessage] });
-            console.log(this.state.message);
-          })
+        // .then(data => {
+        //     //console.log("data with id", data);
+        //     const updatedMessage = [
+        //       {
+        //         id: data.insertID,
+        //         message: this.state.input,
+        //         planet_id: this.state.value
+        //       }
+        //     ];
+        //     this.setstate({ message: [...this.state.message, ...updatedMessage] });
+        //     console.log(this.state.message);
+        //   })
           .catch(error => {
             console.log(error);
           })
@@ -142,9 +150,10 @@ class MessageForm extends Component {
         ) : (
             <div>
                 <div id="messageForm">
+                    
                     <h2>Send a message to the aliens</h2>
-                        {/* <form onSubmit={this.submitMessage}>  */}
-                        <form>
+                        <form onSubmit={this.submitMessage}> 
+                        {/* <form> */}
                             {/* <form onSubmit={this.submitMessage}>  */}
                             <p>
                             Do they exist? It's time to find out yourself! 
@@ -156,10 +165,6 @@ class MessageForm extends Component {
                                     return <option key={planet.id} value={planet.id}>{planet.name}</option>
                                 })}
                             </select>
-                            {/* <SelectPlanet /> */}
-                            {/* <MessageSelect /> */}
-                            {/* <DynamicSelect planetsList={planetsList} onSelectChange={this.handleSelectChange} /> */}
-                            {/* <MessagePlanet onClick={this.submitMessage} />  */}
                             <br />
                             {/* <div className="form-group">
                                 <label htmlFor="your name">Your name</label>
@@ -189,8 +194,8 @@ class MessageForm extends Component {
                                     <button 
                                         className="btn btn-dark btn-lg btn-block"
                                         id="messageButton" 
-                                        type="submit"
-                                        onClick={e => this.submitMessage()}
+                                        type="button"
+                                        // onClick={e => this.submitMessage()}
                                         >
                                         Send your message to the aliens!
                                     </button>

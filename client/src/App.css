@@ -311,9 +311,10 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: pink;
-  /* background: url('./images/starfield.png') no-repeat fixed; */
-  background-size: 40% cover;
+  /* background-color: pink; */
+  /* background-image: url("../src/dark-starfield.jpg"); */
+  /* background-image: url('mercury.png') no-repeat fixed; */
+  /* background-size: 40% cover; */
 }
 
 #messageForm h1 {
@@ -480,4 +481,6 @@ p {
 
 #submittedButton {
   align-items: center;
+  justify-content: center;
+  
 }

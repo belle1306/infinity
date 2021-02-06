@@ -152,7 +152,7 @@ class MessageForm extends Component {
                 <div id="messageForm">
                     
                     <h2>Send a message to the aliens</h2>
-                        <form onSubmit={this.submitMessage}> 
+                        {/* <form onSubmit={this.submitMessage}>  */}
                         {/* <form> */}
                             {/* <form onSubmit={this.submitMessage}>  */}
                             <p>
@@ -195,13 +195,13 @@ class MessageForm extends Component {
                                         className="btn btn-dark btn-lg btn-block"
                                         id="messageButton" 
                                         type="button"
-                                        // onClick={e => this.submitMessage()}
+                                        onClick={e => this.submitMessage()}
                                         >
                                         Send your message to the aliens!
                                     </button>
                                 </div>
                             </div>
-                        </form> 
+                        {/* </form>  */}
                 </div>
             </div> 
         )

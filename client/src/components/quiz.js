@@ -210,12 +210,12 @@ class QuizForm extends React.Component {
 					
 					<div>
 						<Quiz/>
-						<div id="messageForm">
+						<div id="QuizForm">
 							
 								<form> 
 																
 								<br />
-								<div className="form-group">
+								<div className="QuizForm">
 									<label htmlFor="user ID">Your UserId</label>
 									<div className="form-inputs">
 										<input
@@ -227,7 +227,7 @@ class QuizForm extends React.Component {
 								</div> 
 								<br />
 					
-								<div className="form-group">
+								<div className="QuizForm">
 									<label htmlFor="score">Your Score</label>
 									<div className="form-inputs">
 										<input

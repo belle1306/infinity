@@ -472,3 +472,18 @@ p {
   justify-content: center;
   
 }
+
+.quiz{
+  line-height: 1.5;
+  color: white;
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+  text-align: center;
+}
+
+.QuizForm{
+    line-height: 1.5;
+    color: white;
+    font-family: 'Major Mono Display', 'Arial', sans-serif;
+    text-align: center;
+}
+

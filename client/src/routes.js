@@ -5,7 +5,7 @@ import MessageForm from './components/messageForm';
 import ThreeHome from './components/Three';
 import APOD from './components/apod';
 import solarscope from './components/solarscope';
-import quiz from './components/quiz';
+// import quiz from './components/quiz';
 import QuizForm from './components/quiz';
 
 

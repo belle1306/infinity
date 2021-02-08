@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MessageForm from '../components/messageForm';
 
 	function Quiz(){
 		const questions = [
@@ -115,8 +116,8 @@ import React, { useState } from 'react';
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-						))}
+						<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+					))}
 					</div>
 				</>
 			)}
@@ -170,46 +171,51 @@ class QuizForm extends React.Component {
 		}
 
 		submitScore(){
+			this.setState({
+				userId: null,
+				input: null,
+				submitted:true
+			})
 			alert("Score submitted")
-		fetch("/users/quiz", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                userId: this.state.userId,
-				score: this.state.input
-            })
-        })
-        .then(res => {
-            res.json();
-            // this.componentDidMount();
-            //alert("Submitted");
-        })
-        .then(data => {
-            //console.log("data with id", data);
-            const updatedScore = [
-              {
-                id: data.insertID,
-                userId: this.state.userId,
-				score: this.state.input
-              }
-            ];
-            this.setstate({ score: [...this.state.score, ...updatedScore] });
-            console.log(this.state.score);
-          })
-          .catch(error => {
-            console.log(error);
-          })
+			fetch("/users/quiz", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({
+					userId: this.state.userId,
+					score: this.state.input
+				})
+			})
+			.then(res => {
+				res.json();
+				// this.componentDidMount();
+				//alert("Submitted");
+			})
+			// .then(data => {
+			// 	//console.log("data with id", data);
+			// 	const updatedScore = [
+			// 	{
+			// 		id: data.insertID,
+			// 		userId: this.state.userId,
+			// 		score: this.state.input
+			// 	}
+			// 	];
+			// 	this.setstate({ score: [...this.state.score, ...updatedScore] });
+			// 	console.log(this.state.score);
+			// })
+			.catch(error => {
+				console.log(error);
+			})
     }
-		render(){
-			
-		return (
-					
+		render() {
+			return this.state.submitted ? (
+				<MessageForm />
+			) : (
 					<div>
 						<Quiz/>
 						<div id="messageForm">
-							<h1>Submit your score</h1>
+							<h2>Submit your score</h2>
 								<form> 
 									{/* onSubmit={this.submitScore} */}
 								

@@ -1,129 +1,21 @@
-// import React, { Component } from "react";
-// import * as THREE from "three";
-
-// var earthMesh;
-
-// class MessageSurprise extends Component {
-//   componentDidMount() {
-//     // const width = this.mount.clientWidth;
-//     // const height = this.mount.clientHeight;
-//     //ADD SCENE
-//     this.scene = new THREE.Scene();
-//     this.scene.fog = new THREE.FogExp2(0x000000, 0.00025)
-//     //ADD CAMERA
-//     this.camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-//     this.camera.position.z = 10;
-//     //ADD RENDERER
-//     this.renderer = new THREE.WebGLRenderer({ antialias: true });
-//     this.renderer.setClearColor(0x000000, 1);
-//     this.renderer.setSize(window.innerWidth, window.innerHeight);
-//     this.mount.appendChild(this.renderer.domElement);
-
-//     // add some lighting
-//     const ambientLight = new THREE.AmbientLight(0x555555)
-//     this.scene.add(ambientLight)
-
-//     // add a spotlight
-//     const pointLight = new THREE.PointLight(0xffffff, 1, 0)
-//     pointLight.position.set(100, 200, 100)
-//     this.scene.add(pointLight)
-
-//     //ADD CUBE
-//     // const geometry = new THREE.BoxGeometry(5, 5, 5);
-//     // const material = new THREE.MeshBasicMaterial({
-//     //   color: "#0F0",
-//     //   wireframe: true
-//     // });
-//     // this.cube = new THREE.Mesh(geometry, material);
-//     // this.scene.add(this.cube);
-
-    
-//     //Add SPHERE
-//     //LOAD TEXTURE and on completion apply it on box
-//     var loader = new THREE.TextureLoader();
-//     loader.load(
-//       "marble.jpg",
-//       this.onLoad,
-//       this.onProgress,
-//       this.onError
-//     );
-
-//   }
-
-//   componentWillUnmount() {
-//     this.stop();
-//     this.mount.removeChild(this.renderer.domElement);
-//   }
-//   start = () => {
-//     if (!this.frameId) {
-//       this.frameId = requestAnimationFrame(this.animate);
-//     }
-//   };
-//   stop = () => {
-//     cancelAnimationFrame(this.frameId);
-//   };
-//   animate = () => {
-//     this.earthMesh.rotation.x += 0.01;
-//     // this.cube.rotation.y += 0.01;
-//     this.renderScene();
-//     this.frameId = window.requestAnimationFrame(this.animate);
-//   };
-//   renderScene = () => {
-//     this.renderer.render(this.scene, this.camera);
-//   };
-
-//   onLoad = texture => {
-//     var objGeometry = new THREE.SphereGeometry(3, 128, 128);
-//     var objMaterial = new THREE.MeshLambertMaterial({
-//       map: texture,
-//     });
-
-//     this.earthMesh = new THREE.Mesh(objGeometry, objMaterial);
-//     this.scene.add(this.earthMesh);
-//     this.renderScene();
-//     //start animation
-//     this.start();
-//   };
-
-//   onProgress = xhr => {
-//     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-//   };
-
-//   // Function called when download errors
-//   onError = error => {
-//     console.log("An error happened" + error);
-//   };
-
-//   render() {
-//     return (
-//       <div
-//         style={{ width: "400px", height: "400px" }}
-//         ref={mount => {
-//           this.mount = mount;
-//         }}
-//       />
-//     );
-//   }
-// }
-// export default MessageSurprise;
-
 import React, {Component} from "react";
 import * as THREE from "three";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import MessageText from "../components/messageText";
 
 
-export default class MessageSurprise extends Component {
+
+export default class MessageQuotes extends Component {
     componentDidMount() {
         let scene = new THREE.Scene()
         // scene.fog = new THREE.FogExp2(0x000000, 0.00025)
         let camera = new THREE.PerspectiveCamera(
-            50, 
+            35, 
             window.innerWidth / window.innerHeight, 
             0.1, 
-            10000
+            4000
             );
-            camera.position.z = -3000
+            camera.position.z = -1000
         
         let renderer = new THREE.WebGLRenderer({
             antialias: true
@@ -147,16 +39,16 @@ export default class MessageSurprise extends Component {
         // make a THREE.js loader
         const loader = new THREE.TextureLoader()
         loader.load(
-            "marble.jpg",
+            "blue.jpg",
             this.onLoad,
             this.onProgress,
             this.onError
         );
 
-        // make planet wilson
+        // make planet 
         const makePlanet = function () {
-        const texture = loader.load("marble.jpg")
-        const geometry = new THREE.SphereGeometry(800, 128, 128)
+        const texture = loader.load("blue.jpg")
+        const geometry = new THREE.SphereGeometry(600, 128, 128)
         const material = new THREE.MeshLambertMaterial({
         //     color: 0x2727e6,
             map: texture
@@ -200,6 +92,7 @@ export default class MessageSurprise extends Component {
         }
         
         const earth = makePlanet()
+        // eslint-disable-next-line
         const stars2 = makeStars("particle.png", 1000)
         
  
@@ -283,13 +176,18 @@ export default class MessageSurprise extends Component {
     
     render() {
         return (
-            <div ref ={ref => (this.mount = ref)}>;
-            <MessageText />
+            <div>
+                <h3 className="title">The purpose of this website is to inspire others to reach beyond their imagination. Fly high, to infinity and beyond!</h3>
+                <h5>Click the button below to get inspired ✨ 🚀</h5>
+                <div ref ={ref => (this.mount = ref)}></div>
+                <div>
+                    <MessageText />
+                </div>
             </div>
             
         );
     };
 }
 
-const rootElement = document.getElementById("root")
-ReactDOM.render(<MessageSurprise />, rootElement);
+// const rootElement = document.getElementById("root")
+// ReactDOM.render(<MessageQuotes />, rootElement);

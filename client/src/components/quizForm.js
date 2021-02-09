@@ -1,5 +1,4 @@
 import React from "react";
-import MessageForm from "../components/messageForm";
 // import Quiz from "../components/quiz";
 
 
@@ -141,7 +140,7 @@ class QuizForm extends React.Component {
             userId: null,
             input: null,
             score: [],
-            submitted: false
+            // submitted: false
         }
         // this.handleInputScore = this.handleInputScore(this);
         this.handleUserId = this.handleUserId.bind(this)
@@ -217,9 +216,7 @@ class QuizForm extends React.Component {
         })
 }
     render() {
-        return this.state.submitted ? (
-            <MessageForm />
-        ) : (
+        return (
                 <div>
                     <div id="messageForm">
                         <h2>Submit your score</h2>

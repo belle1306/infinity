@@ -1,31 +1,6 @@
 import React, { Component } from "react";
 import MessageSubmitted from "../components/messageSubmitted";
-// import Particles from 'react-particles-js'
-
-// const particleOpt = {
-//     particles: {
-//         number: {
-//             value: 150,
-//             density: {
-//             enable: true
-//             }
-//         }
-//     }
-// }
-
-
-// const planetsList = [
-//     {id: '1', name: 'Mercury'},
-//     {id: '2', name: 'Venus'},
-//     {id: '3', name: 'Earth'},
-//     {id: '4', name: 'Mars'},
-//     {id: '5', name: 'Jupiter'},
-//     {id: '6', name: 'Saturn'},
-//     {id: '7', name: 'Uranus'},
-//     {id: '8', name: 'Neptune'},
-//     {id: '9', name: 'Pluto'},
-// ];
-
+// import MessageQuotes from "../components/messageQuotes";
 class MessageForm extends Component {
     constructor() {
         super()

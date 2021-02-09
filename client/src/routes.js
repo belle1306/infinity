@@ -7,7 +7,7 @@ import APOD from './components/apod';
 import solarscope from './components/solarscope';
 // import quiz from './components/quiz';
 import QuizForm from './components/quiz';
-import MessageSuprise from './components/messageSurprise';
+import MessageQuotes from './components/messageQuotes';
 
 
 class Routes extends Component {
@@ -18,7 +18,7 @@ class Routes extends Component {
                 <Route path="/apod" component={APOD} />
                 <Route path="/solarscope" component={solarscope} />
                 <Route path="/quiz" component={QuizForm} />
-                <Route path="/messageSurprise" component={MessageSuprise} />
+                <Route path="/messageQuotes" component={MessageQuotes} />
                 {/* <Route path="/" component={Home} /> */}
                 <Route path="/" component={ThreeHome} />
                 <Route path="/home" component={ThreeHome} />

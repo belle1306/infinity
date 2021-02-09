@@ -615,3 +615,35 @@ p {
   font-size: 30px;
   
 }
+
+/* ========================================= */
+/* ================= QUOTES ================== */
+/* ========================================= */
+
+#text p {
+  padding-top: 30px;
+  font-family: 'Courier New';
+  font-size: 30px;
+}
+
+#author p {
+  font-family: 'Courier New';
+  font-size: 30px;
+}
+
+.quotesButton {
+  width: 20%;
+  margin-top: 3rem;
+  font-family: 'Major Mono Display';
+  background-color: rgb(100, 184, 190);
+  border-radius: 5px;
+  margin-left: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h5 {
+  color: white;
+}

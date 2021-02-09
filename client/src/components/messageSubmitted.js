@@ -35,15 +35,15 @@ export default class MessageSubmitted extends React.Component {
                             <p>Your message is on its way to the aliens!
                                 Thank you for visiting our website. We look forward to seeing you soon! 🚀✨
                             </p>
-                    <div className="container-submit">
-                            <Link to="/ThreeHome">
+                            <div className="container-submit">
+                            <Link to="/MessageQuotes">
                                 <button className="submittedButton"
                                 type="submit">
-                                Back to Home
+                                Discover Quotes
                                 </button>
                             </Link>
+                            </div>
                     </div>
-                </div>
             </div>
         )
     }

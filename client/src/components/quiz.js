@@ -129,14 +129,16 @@ class QuizForm extends React.Component {
 		constructor() {
 			super()
 			this.state = {
-				userId: null,
-				input: null,
+				value: "",
+				user_id: null,
+				input: "",
 				score: [],
-				submitted: false
+				
 			}
-			// this.handleInputScore = this.handleInputScore(this);
-			this.handleUserId = this.handleUserId.bind(this)
+			this.handleInputScore = this.handleInputScore.bind(this);
+			this.handleUserId = this.handleUserId.bind(this);
 			this.submitScore = this.submitScore.bind(this);
+			
 		}
 		
 		handleInputScore(e) {
@@ -150,7 +152,7 @@ class QuizForm extends React.Component {
 		handleUserId(e) {
 			e.preventDefault(); 
 			this.setState({
-				userId: e.target.value,
+				value: e.target.value,
 			});
 		};
 		
@@ -159,7 +161,7 @@ class QuizForm extends React.Component {
 			.then(res => res.json())
 			.then(data => {
 				this.setState({
-					userId: data,
+					user_id: data,
 					score: data
 				})
 			})
@@ -170,14 +172,14 @@ class QuizForm extends React.Component {
 		}
 
 		submitScore(){
-			alert("Score submitted")
+		alert("Score submitted")
 		fetch("/users/quiz", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                userId: this.state.userId,
+                user_id: this.state.value,
 				score: this.state.input
             })
         })
@@ -186,18 +188,18 @@ class QuizForm extends React.Component {
             // this.componentDidMount();
             //alert("Submitted");
         })
-        .then(data => {
-            //console.log("data with id", data);
-            const updatedScore = [
-              {
-                id: data.insertID,
-                userId: this.state.userId,
-				score: this.state.input
-              }
-            ];
-            this.setstate({ score: [...this.state.score, ...updatedScore] });
-            console.log(this.state.score);
-          })
+        // .then(data => {
+        //     //console.log("data with id", data);
+        //     const updatedScore = [
+        //       {
+        //         id: data.insertID,
+        //         user_id: this.state.value,
+		// 		score: this.state.input
+        //       }
+        //     ];
+        //     this.setstate({ score: [...this.state.score, ...updatedScore] });
+        //     console.log(this.state.score);
+        //   })
           .catch(error => {
             console.log(error);
           })
@@ -208,17 +210,16 @@ class QuizForm extends React.Component {
 					
 					<div>
 						<Quiz/>
-						<div id="messageForm">
-							<h1>Submit your score</h1>
+						<div id="QuizForm">
+							
 								<form> 
-									{/* onSubmit={this.submitScore} */}
-								
+																
 								<br />
-								<div className="form-group">
+								<div className="QuizForm">
 									<label htmlFor="user ID">Your UserId</label>
 									<div className="form-inputs">
 										<input
-										value={this.state.handleUserId}
+										defaultvalue={this.state.user_id}
 										type="text"
 										onChange={e => this.handleUserId(e)}
 										/>
@@ -226,20 +227,18 @@ class QuizForm extends React.Component {
 								</div> 
 								<br />
 					
-								<div className="form-group">
+								<div className="QuizForm">
 									<label htmlFor="score">Your Score</label>
 									<div className="form-inputs">
 										<input
-										value={this.state.handleInputScore}
-										
-										type="textarea"
+										defaultvalue={this.state.score}
 										onChange={e => this.handleInputScore(e)}
 										/>
-										<span id="charLimit">(150 characters limit)</span>
+										{/* <span id="charLimit">(150 characters limit)</span> */}
 										<button 
 											id="messageButton" 
 											type="submit"
-											onClick={e => this.submitScore()}
+											onClick={e => this.submitScore(e)}
 											>
 											Submit your score
 										</button>
@@ -256,22 +255,5 @@ export default QuizForm;
 
 
 
-// import { useEffect } from 'react';
-
-// const Quiz = url => {
-//   useEffect(() => {
-//     const script = document.createElement('script');
-
-//     script.src = "https://files.liveworksheets.com/embed/embed.js";
-//     script.async = true;
-
-//     document.body.appendChild(script);
-
-//     return () => {
-//       document.body.removeChild(script);
-      
-//     }
-//   }, ["https://www.liveworksheets.com/worksheets/en/Science/The_Solar_System/Our_Solar_System_xa5810sy"]);
-// };
 
 

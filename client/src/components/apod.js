@@ -47,7 +47,8 @@ class APOD extends React.Component {
         return(
             
             <div style={{margin: 15 + "px"}}>
-                <h1>Lets checkout the astronomical event that took place on your last birthday!</h1>
+                <h2>Lets checkout the astronomical event that took place on your last birthday!</h2>
+                <p>This archive list links to previous daily APOD pages from the current date through January 1, 2015.</p>
                 <DatePicker selected={this.state.date} onChange={ date => this.handleDateChange(date) } maxDate={new Date()} />
                 <button onClick={ () => this.handleAPICall() }>
                     Get resource

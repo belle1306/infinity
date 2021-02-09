@@ -5,13 +5,15 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "migrate": "node model/database.js",
-    "test" : "jest"
+    "test": "jest"
   },
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.12.13",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16.1": "^1.6.4",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",

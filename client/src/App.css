@@ -587,3 +587,31 @@ p {
   font-size: 20px;
   font-family: Arial;
 }
+
+
+/* ========================================= */
+/* ================= QUIZ ================== */
+/* ========================================= */
+
+.question-section {
+  font-family:'Courier New', Courier, monospace;
+  color: white;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.answer-section {
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.score-section {
+  color: white;
+  font-size: 30px;
+  
+}

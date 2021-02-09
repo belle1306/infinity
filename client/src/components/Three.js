@@ -79,6 +79,7 @@ export default function ThreeHome() {
       <Loading />
       <header>
       <a href='/Quiz' className="top-left" children="Quiz" />
+      <a href='/MessageSurprise' children="Message Surprise" />
       <a href="/message" className="top-right" children="Send Message" />
       <a href="/apod" className="bottom-left" children="APOD" />
       <a href="/solarscope" className="bottom-right" children="Solarscope" />

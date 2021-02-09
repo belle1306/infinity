@@ -12,8 +12,11 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.6.0",
     "draco3d": "^1.4.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16.1": "^1.6.4",
     "lerp": "^1.0.3",
     "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-animated-css": "^1.2.1",
     "react-bootstrap": "^1.4.3",
@@ -29,11 +32,11 @@
     "react-three-fiber": "^5.3.17",
     "reactjs-dropdown-component": "^1.1.8",
     "semantic-ui-react": "^2.0.3",
+    "sinon": "^9.2.4",
     "styled-components": "^5.2.1",
     "three": "^0.124.0",
     "web-vitals": "^0.2.4"
   },
-
   "devDependencies": {
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
@@ -47,7 +50,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
@@ -67,5 +69,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ]
 }

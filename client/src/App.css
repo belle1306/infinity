@@ -624,15 +624,18 @@ p {
   padding-top: 30px;
   font-family: 'Courier New';
   font-size: 30px;
+  color: black
 }
 
 #author p {
   font-family: 'Courier New';
   font-size: 30px;
+  color: black
 }
 
 .quotesButton {
   width: 20%;
+  height: 50px;
   margin-top: 3rem;
   font-family: 'Major Mono Display';
   background-color: rgb(100, 184, 190);
@@ -646,4 +649,16 @@ p {
 
 h5 {
   color: white;
+}
+
+#quote-box {
+  width: 800px;
+  margin: 0 auto;
+  padding: 1px 15px;
+  font-weight: 550;
+  font-size: 22px;
+  background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px 1px gray;
 }

@@ -21,9 +21,11 @@ function Iframe(props) {
 
 function solarscope() {
   return (
-    <div className="App">
+    <div className="stars">
       {/* <h1>Lets start exploring</h1> */}
       {/* <Iframe iframe={demos["solar"]} allow="autoplay" />, */}
+      <h3>Lets start exploring</h3>
+      <h6>* Credit to Solar System Scope</h6>
       <Iframe iframe={demos["solar"]} allow="autoplay" />,
     </div>
   );

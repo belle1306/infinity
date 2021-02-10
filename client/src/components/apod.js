@@ -45,19 +45,29 @@ class APOD extends React.Component {
         const element = this.state.resource_type === 'image' ? <img width="560" height="315" src={ this.state.uri } alt="Apod pic"/> : <iframe title="APOD Pic" width="560" height="315" src={ this.state.uri } frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>;
         
         return(
-            
-            <div style={{margin: 15 + "px"}}>
-                <h2>Lets checkout the astronomical event that took place on your last birthday!</h2>
-                <p>This archive list links to previous daily APOD pages from the current date through January 1, 2015.</p>
-                <DatePicker selected={this.state.date} onChange={ date => this.handleDateChange(date) } maxDate={new Date()} />
-                <button onClick={ () => this.handleAPICall() }>
-                    Get resource
-                </button>
-                <p>{ this.state.description }</p>
-                <div>
-                    { element }
-                </div>
+            <div className="background-container">
+                <div className="stars">
+                    <div style={{margin: 15 + "px"}}>
+                        <h3>Lets checkout the astronomical event that took place on your last birthday!</h3>
+                        <p>This archive list links to previous daily APOD pages from the current date through January 1, 2015.</p>
+                        <div className="datepicker">
+                        <DatePicker selected={this.state.date} onChange={ date => this.handleDateChange(date) } maxDate={new Date()} />
+                        </div>
+                            <div className="container">
+                                <button className="apodButton"
+                                onClick={ () => this.handleAPICall() }>
+                                    Get resource
+                                </button>
+                            </div>
+                            <div className="image-description">
+                                <p>{ this.state.description }</p>
+                                <div className="apod-image">
+                                    { element }
+                                </div>
+                            </div>
+                    </div>
             </div>
+        </div>
         );
     }
 

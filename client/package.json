@@ -1,6 +1,11 @@
 {
-  "homepage": "https://belle1306.github.io/infinity/",
   "name": "infinityandbeyond",
+  "jest": {
+    "verbose": true,
+    "moduleDirectories": ["node_modules", "src"],
+    "testPathIgnorePatterns": ["/node_modules/"],
+    "transformIgnorePatterns": ["/node_modules/"]
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +19,7 @@
     "bootstrap": "^4.6.0",
     "draco3d": "^1.4.1",
     "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.1",
     "enzyme-adapter-react-16.1": "^1.6.4",
     "lerp": "^1.0.3",
     "node-sass": "^4.14.1",
@@ -30,6 +36,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-spring": "^8.0.27",
+    "react-test-renderer": "^17.0.1",
     "react-three-fiber": "^5.3.17",
     "reactjs-dropdown-component": "^1.1.8",
     "semantic-ui-react": "^2.0.3",
@@ -42,17 +49,13 @@
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "babel-jest": "^26.6.3",
-    "react-test-renderer": "^17.0.1",
-    "gh-pages": "^2.0.1",
-    "react-scripts": "1.0.7"
+    "react-test-renderer": "^17.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "jest --verbose",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

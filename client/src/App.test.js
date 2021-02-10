@@ -1,3 +1,12 @@
+// import { render, screen } from '@testing-library/react';
+// import App from './App';
+
+// test('renders learn react link', () => {
+//   render(<App />);
+//   const linkElement = screen.getByText(/learn react/i);
+//   expect(linkElement).toBeInTheDocument();
+// });
+
 // import React from "react";
 // import App from "./App";
 // // import Routes from "./routes";
@@ -15,6 +24,7 @@
 //   //   let wrapper = shallow(<App />);
 //   //   expect(wrapper.contains(<Routes />)).toEqual(true);
 //   // });
+//   it("renders MessageSubmitted component without crashing", () => {
 //   test("renders MessageSubmitted component without crashing", () => {
 //     const wrapper = shallow(<MessageSubmitted />);
 //     const header =(<h2>It means 'thank you' in alien language!</h2>);

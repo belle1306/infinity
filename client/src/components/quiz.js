@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import QuizForm from '../components/quizForm';
 
 	function Quiz(){
 		const questions = [
@@ -104,9 +105,11 @@ import React, { useState } from 'react';
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
+					<QuizForm />
 				</div>
 			) : (
 				<>
+				<h2>Get started</h2>
 					<div className='question-section'>
 						<div className='question-count'>
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
@@ -115,143 +118,18 @@ import React, { useState } from 'react';
 					</div>
 					<div className='answer-section'>
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
-							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-						))}
+						<button btn btn-lg onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+					))}
 					</div>
+					
 				</>
 			)}
 		</div>
 	);
 }
-	//start function here
 
-class QuizForm extends React.Component {
-		constructor() {
-			super()
-			this.state = {
-				value: "",
-				user_id: null,
-				input: "",
-				score: [],
-				
-			}
-			this.handleInputScore = this.handleInputScore.bind(this);
-			this.handleUserId = this.handleUserId.bind(this);
-			this.submitScore = this.submitScore.bind(this);
-			
-		}
-		
-		handleInputScore(e) {
-			e.preventDefault(); 
-			this.setState({
-				input: e.target.value,
-			});
-			
-		};
-	
-		handleUserId(e) {
-			e.preventDefault(); 
-			this.setState({
-				value: e.target.value,
-			});
-		};
-		
-		componentDidMount() {
-			fetch("/users")
-			.then(res => res.json())
-			.then(data => {
-				this.setState({
-					user_id: data,
-					score: data
-				})
-			})
-			.catch(err => {
-				console.log(err);
-			});
-			
-		}
+export default Quiz;
 
-		submitScore(){
-		alert("Score submitted")
-		fetch("/users/quiz", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                user_id: this.state.value,
-				score: this.state.input
-            })
-        })
-        .then(res => {
-            res.json();
-            // this.componentDidMount();
-            //alert("Submitted");
-        })
-        // .then(data => {
-        //     //console.log("data with id", data);
-        //     const updatedScore = [
-        //       {
-        //         id: data.insertID,
-        //         user_id: this.state.value,
-		// 		score: this.state.input
-        //       }
-        //     ];
-        //     this.setstate({ score: [...this.state.score, ...updatedScore] });
-        //     console.log(this.state.score);
-        //   })
-          .catch(error => {
-            console.log(error);
-          })
-    }
-		render(){
-			
-		return (
-					
-					<div>
-						<Quiz/>
-						<div id="QuizForm">
-							
-								<form> 
-																
-								<br />
-								<div className="QuizForm">
-									<label htmlFor="user ID">Your UserId</label>
-									<div className="form-inputs">
-										<input
-										defaultvalue={this.state.user_id}
-										type="text"
-										onChange={e => this.handleUserId(e)}
-										/>
-									</div>
-								</div> 
-								<br />
-					
-								<div className="QuizForm">
-									<label htmlFor="score">Your Score</label>
-									<div className="form-inputs">
-										<input
-										defaultvalue={this.state.score}
-										onChange={e => this.handleInputScore(e)}
-										/>
-										{/* <span id="charLimit">(150 characters limit)</span> */}
-										<button 
-											id="messageButton" 
-											type="submit"
-											onClick={e => this.submitScore(e)}
-											>
-											Submit your score
-										</button>
-									</div>
-								</div>
-								</form> 
-						</div>
-					</div>  
-				)
-			}
-		}
-
-export default QuizForm;
 
 
 

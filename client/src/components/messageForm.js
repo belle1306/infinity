@@ -1,31 +1,6 @@
 import React, { Component } from "react";
 import MessageSubmitted from "../components/messageSubmitted";
-// import Particles from 'react-particles-js'
-
-// const particleOpt = {
-//     particles: {
-//         number: {
-//             value: 150,
-//             density: {
-//             enable: true
-//             }
-//         }
-//     }
-// }
-
-
-// const planetsList = [
-//     {id: '1', name: 'Mercury'},
-//     {id: '2', name: 'Venus'},
-//     {id: '3', name: 'Earth'},
-//     {id: '4', name: 'Mars'},
-//     {id: '5', name: 'Jupiter'},
-//     {id: '6', name: 'Saturn'},
-//     {id: '7', name: 'Uranus'},
-//     {id: '8', name: 'Neptune'},
-//     {id: '9', name: 'Pluto'},
-// ];
-
+// import MessageQuotes from "../components/messageQuotes";
 class MessageForm extends Component {
     constructor() {
         super()
@@ -135,9 +110,9 @@ class MessageForm extends Component {
         //     this.setstate({ message: [...this.state.message, ...updatedMessage] });
         //     console.log(this.state.message);
         //   })
-          .catch(error => {
+        .catch(error => {
             console.log(error);
-          })
+        })
     }
     
     
@@ -150,21 +125,23 @@ class MessageForm extends Component {
         ) : (
             <div>
                 <div id="messageForm">
-                    
                     <h2>Send a message to the aliens</h2>
+                    <div>
                         {/* <form onSubmit={this.submitMessage}>  */}
                         {/* <form> */}
                             {/* <form onSubmit={this.submitMessage}>  */}
-                            <p>
+                            <h4>
                             Do they exist? It's time to find out yourself! 
-                            </p>
-                            <h2>Current Planet: {value}</h2>
+                            </h4>
+                            {/* <h2>Current Planet: {value}</h2> */}
+                            <div className="form-inputs1">
                             <label htmlFor="options">Pick a planet!</label>
                             <select id="options" value={value} onChange={this.onChange}>
                                 {options.map((planet) => {
                                     return <option key={planet.id} value={planet.id}>{planet.name}</option>
                                 })}
                             </select>
+                            </div>
                             <br />
                             {/* <div className="form-group">
                                 <label htmlFor="your name">Your name</label>
@@ -180,27 +157,29 @@ class MessageForm extends Component {
                             <br />
                 
                             <div className="form-group">
-                                <label htmlFor="your message">Your message</label>
+                                {/* <label htmlFor="your message">Your message</label> */}
                                 <div className="form-inputs">
                                     <textarea
                                     // value={this.state.message}
                                     name="message"
                                     type="textarea"
+                                    placeholder="Type your message..."
                                     defaultValue={this.state.input}
                                     onChange={e => this.handleInput(e)}
                                     maxLength="150"
                                     />
                                     <span id="charLimit">(150 characters limit)</span>
                                     <button 
-                                        className="btn btn-dark btn-lg btn-block"
+                                        className="btn btn-lg btn-block"
                                         id="messageButton" 
                                         type="button"
                                         onClick={e => this.submitMessage()}
                                         >
-                                        Send your message to the aliens!
+                                        Send my message! 🚀✨
                                     </button>
                                 </div>
                             </div>
+                        </div>
                         {/* </form>  */}
                 </div>
             </div> 

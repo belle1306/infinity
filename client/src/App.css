@@ -19,15 +19,6 @@ body,
   padding: 0;
   overflow: hidden;
 }
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 header {
   position: absolute;
   z-index: 99;
@@ -117,7 +108,9 @@ a {
   
   body {
       /* background: #171717; */
-      background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #070710 100%);
+      background: black
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+      /* background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #070710 100%); */
   }
   
   .bg {
@@ -126,7 +119,9 @@ a {
     height: 100%;
     background-size: cover;
     position: fixed !important; */
-    background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%);
+    background: black
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    /* background: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%); */
   }
   
   .loading {
@@ -156,11 +151,13 @@ a {
     position: absolute;
     top: 120px;
     left: 50%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lexend Mega', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
     font-weight: 800;
-    font-size: 14em;
+    font-size: 10em;
     transform: translate3d(-50%, 0, 0);
     margin: 0;
+    /* color: radial-gradient(at 50% 100%, #873740 0%, #272730 40%, #171720 80%, #070710 100%); */
     color: peru;
     line-height: 0.8em;
     letter-spacing: -15px;
@@ -288,7 +285,7 @@ a {
 }
 
 /* ========================================= */
-/* =============== WISH FORM =============== */
+/* =============== MESSAGE FORM =============== */
 /* ========================================= */
 
 #messageForm {
@@ -299,25 +296,49 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  /* background-color: pink; */
-  /* background-image: url("../src/dark-starfield.jpg"); */
+  background: black
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  /* background-color: rgb(209, 73, 96); */
+  /* background-image: url('dark-starfield.jpg'); */
   /* background-image: url('mercury.png') no-repeat fixed; */
   /* background-size: 40% cover; */
 }
 
-#messageForm h1 {
+h4 {
+  color: white;
+}
+
+#options {
+  width: 100vh;
+  height: 8vh;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-family: 'Goldman', cursive;
+  /* padding-left: 20px; */
+}
+
+#messageForm h2 {
+  padding-top: 30px;
   text-align: center;
+  font-size: 40px;
+  /* font-family: 'Bebas Neue', cursive; */
+  font-family: 'Goldman', cursive;
 }
 
 #messageForm form {
+  height: 40vh;
   width: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-#messageForm p {
+#messageForm h4 {
   font-family: 'Major Mono Display', 'Arial', sans-serif;
   text-align: center;
   line-height: 1.5;
@@ -336,14 +357,22 @@ a {
 /* LEFT COLUMN OF FORM */
 #messageForm label {
   font-family: 'Major Mono Display', 'Arial', sans-serif;
+  color: white;
   /* border: 3px solid red; */
-  width: 30%;
-  text-align: center;
+  /* width: 30%; */
+  /* text-align: center; */
 }
 
 /* RIGHT COLUMN OF FORM */
 .form-inputs {
-  width: 70%;
+  width: 100%;
+  /* border: 3px solid blue; */
+}
+
+.form-inputs1 {
+  width: 100%;
+  padding-left: 110px;
+
   /* border: 3px solid blue; */
 }
 
@@ -353,6 +382,7 @@ textarea {
   width: 100%;
   border: none;
   border-radius: 5px;
+  font-family: 'Goldman', cursive;
 }
 
 textarea {
@@ -380,25 +410,16 @@ textarea {
   font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 0.5rem;
+  font-size: 10px;
+  color:white;
 }
 
 #messageButton {
   width: 100%;
   margin-top: 2rem;
-}
-
-
-.drop-down {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  border-radius: 10px;
-}
-
-.drop-intro {
-  font-size: large;
+  font-family: 'Major Mono Display';
+  background-color: white;
+  border-radius: 5px;
 }
 
 /* ========================================= */
@@ -458,21 +479,189 @@ textarea {
 } */
 
 h2 {
+  color:white;
+  font-size: 60px;
+  padding-bottom: 40px;
+}
+
+h3 {
   color: white;
+  font-family: 'Major Mono Display';
 }
 
 p {
   line-height: 1.5;
   color: white;
+  text-align: center;
+  align-items: center;
   font-family: 'Major Mono Display', 'Arial', sans-serif;
 }
 
-#submittedButton {
+.container-submit {
+  /* margin: 0 auto; */
+  width: 100%;
+  /* max-width: 100%; */
+  /* height: 100%; */
+  padding-top: 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.submittedButton {
+  width: 100%;
+  margin-top: 2rem;
+  font-family: 'Major Mono Display';
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 60px;
+}
+
+/* ========================================= */
+/* ================= APOD ================== */
+/* ========================================= */
+
+.datepicker {
+  margin-top: 150px;
+  /* padding: 70px; */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* height: 2rem; */
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apodButton {
+  margin-top: 2rem;
+  font-family: 'Major Mono Display';
+  /* background-color: white; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.stars {
+  background: black
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 9;
+}
+
+.apod-image {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-description p {
+  padding-top: 30px;
+  font-size: 20px;
+  font-family: Arial;
+}
+
+
+/* ========================================= */
+/* ================= QUIZ ================== */
+/* ========================================= */
+
+.question-section {
+  font-family:'Courier New', Courier, monospace;
+  color: white;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.answer-section {
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.score-section {
+  color: white;
+  font-size: 30px;
   
 }
 
+/* ========================================= */
+/* ================= QUOTES ================== */
+/* ========================================= */
+
+#text p {
+  padding-top: 30px;
+  font-family: 'Courier New';
+  font-size: 30px;
+  color: black
+}
+
+#author p {
+  font-family: 'Courier New';
+  font-size: 30px;
+  color: black
+}
+
+.quotesButton {
+  width: 20%;
+  height: 50px;
+  margin-top: 3rem;
+  font-family: 'Major Mono Display';
+  background-color: rgb(100, 184, 190);
+  border-radius: 5px;
+  margin-left: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h5 {
+  color: white;
+}
+
+#quote-box {
+  width: 800px;
+  margin: 0 auto;
+  padding: 1px 15px;
+  font-weight: 550;
+  font-size: 22px;
+  background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px 1px gray;
+}
 .quiz{
   line-height: 1.5;
   color: white;
@@ -485,5 +674,9 @@ p {
     color: white;
     font-family: 'Major Mono Display', 'Arial', sans-serif;
     text-align: center;
+}
+
+h6 {
+  color:white;
 }
 

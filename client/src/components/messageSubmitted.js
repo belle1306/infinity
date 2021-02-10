@@ -1,50 +1,52 @@
 // import React from "react";
 import {Link} from "react-router-dom";
-import React, { Component } from "react";
+import React from "react";
 // import {Animated} from 'react-animated-css';
-import Particles from 'react-particles-js';
-import { Button } from 'react-bootstrap';
+// import Particles from 'react-particles-js';
+import ThreeStars from '../components/ThreeStars';
 
-const particleOpt = {
-    particles: {
-        number: {
-            value: 150,
-            density: {
-            enable: true
-            }
-        }
-    }
-  }
+// const particleOpt = {
+//     particles: {
+//         number: {
+//             value: 150,
+//             density: {
+//             enable: true
+//             }
+//         }
+//     }
+//   }
 
-class MessageSubmitted extends Component {
+export default class MessageSubmitted extends React.Component {
+// class MessageSubmitted extends Component {
     render() {
         return (
             <div>
+                <ThreeStars />
                 <div id="particles">
-                <Particles width="100vw" height="100vh" params={particleOpt} />
+                
+                {/* <Particles width="100vw" height="100vh" params={particleOpt} /> */}
                 </div>
                     <div id="messageSubmitted">
                         {/* <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}> */}
                             <h2>⏁⊑⏃⋏☍ ⊬⍜⎍</h2>
                         {/* </Animated> */}
-                            <h2>It means 'thank you' in alien language!</h2>
+                            <h3>It means 'thank you' in alien language!</h3>
                             <br/>
                             <p>Your message is on its way to the aliens!
-                                Thank you for visiting our website. We look forward to seeing you soon!
+                                Thank you for visiting our website. We look forward to seeing you soon! 🚀✨
                             </p>
-                    <div>
-                        <Link to="/ThreeHome">
-                            <Button variant="light"
-                            id="submittedButton"
-                            type="submit">
-                            Back to Home
-                            </Button>
-                        </Link>
+                            <div className="container-submit">
+                            <Link to="/MessageQuotes">
+                                <button className="submittedButton"
+                                type="submit">
+                                Discover Quotes
+                                </button>
+                            </Link>
+                            </div>
                     </div>
-                </div>
             </div>
         )
     }
 }
 
-export default MessageSubmitted;
+// export default MessageSubmitted;

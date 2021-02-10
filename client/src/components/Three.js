@@ -3,21 +3,9 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { Canvas } from 'react-three-fiber';
 import { useTransition, a } from 'react-spring';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls, useGLTF } from '@react-three/drei';
+import { OrbitControls ,useGLTF } from '@react-three/drei';
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import '../App.css';
-
-// function Model({ url }) {
-// //   const { nodes, materials } = useGLTF(url, 'draco-gltf', true);
-// const { nodes, materials } = useGLTF(url, true);
-//   return (
-//     <group rotation={[-Math.PI / 2, 0, 0]} position={[0, -7, 0]} scale={[7, 7, 7]}>
-//       <group rotation={[Math.PI / 13.5, -Math.PI / 5.8, Math.PI / 5.6]}>
-//         <mesh castShadow receiveShadow geometry={nodes.planet001.geometry} material={materials.scene} />
-//         <mesh castShadow receiveShadow geometry={nodes.planet002.geometry} material={materials.scene} />
-//       </group>
-//     </group>
-//   )
-// }
 
 function Model({ url }) {
     const gltf = useGLTF(url, true);
@@ -58,8 +46,6 @@ export default function ThreeHome() {
       <div className="bg" />
       <h1>
         INFINITY
-        {/* <br />
-        <span>w/JASON</span> */}
       </h1>
       <Canvas shadowMap camera={{ position: [0, 0, 15] }}>
         <ambientLight intensity={0.75} />
@@ -92,11 +78,11 @@ export default function ThreeHome() {
       {/* <div className="layer" /> */}
       <Loading />
       <header>
-      <a href='/game' className="top-left" children="Discover" />
+      <a href='/Quiz' className="top-left" children="Quiz" />
+      {/* <a href='/MessageSurprise' children="Message Surprise" /> */}
       <a href="/message" className="top-right" children="Send Message" />
       <a href="/apod" className="bottom-left" children="APOD" />
       <a href="/solarscope" className="bottom-right" children="Solarscope" />
-
       </header>
     </>
   )

@@ -662,3 +662,21 @@ h5 {
   border-radius: 20px;
   box-shadow: 0px 0px 2px 1px gray;
 }
+.quiz{
+  line-height: 1.5;
+  color: white;
+  font-family: 'Major Mono Display', 'Arial', sans-serif;
+  text-align: center;
+}
+
+.QuizForm{
+    line-height: 1.5;
+    color: white;
+    font-family: 'Major Mono Display', 'Arial', sans-serif;
+    text-align: center;
+}
+
+h6 {
+  color:white;
+}
+

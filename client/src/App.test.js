@@ -25,6 +25,7 @@
 //   //   expect(wrapper.contains(<Routes />)).toEqual(true);
 //   // });
 //   it("renders MessageSubmitted component without crashing", () => {
+//   test("renders MessageSubmitted component without crashing", () => {
 //     const wrapper = shallow(<MessageSubmitted />);
 //     const header =(<h2>It means 'thank you' in alien language!</h2>);
 //     expect(wrapper.contains(header)).toEqual(true);

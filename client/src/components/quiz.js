@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import QuizFrom from '../components/quizForm';
+import QuizForm from '../components/quizForm';
 
 	function Quiz(){
 		const questions = [
@@ -105,7 +105,7 @@ import QuizFrom from '../components/quizForm';
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
-					<QuizFrom />
+					<QuizForm />
 				</div>
 			) : (
 				<>
@@ -121,6 +121,7 @@ import QuizFrom from '../components/quizForm';
 						<button btn btn-lg onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 					))}
 					</div>
+					
 				</>
 			)}
 		</div>
@@ -128,7 +129,8 @@ import QuizFrom from '../components/quizForm';
 }
 
 export default Quiz;
-	//start function here
+
+
 
 
 

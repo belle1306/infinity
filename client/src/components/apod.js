@@ -49,6 +49,7 @@ class APOD extends React.Component {
                 <div className="stars">
                     <div style={{margin: 15 + "px"}}>
                         <h3>Lets checkout the astronomical event that took place on your last birthday!</h3>
+                        <p>This archive list links to previous daily APOD pages from the current date through January 1, 2015.</p>
                         <div className="datepicker">
                         <DatePicker selected={this.state.date} onChange={ date => this.handleDateChange(date) } maxDate={new Date()} />
                         </div>
@@ -65,8 +66,8 @@ class APOD extends React.Component {
                                 </div>
                             </div>
                     </div>
-                </div>
             </div>
+        </div>
         );
     }
 

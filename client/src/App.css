@@ -242,21 +242,25 @@ a {
   a.top-left {
     top: 60px;
     left: 60px;
+    color: white;
   }
   
   a.top-right {
     top: 60px;
     right: 60px;
+    color: white;
   }
   
   a.bottom-left {
     bottom: 60px;
     left: 60px;
+    color: white;
   }
   
   a.bottom-right {
     bottom: 60px;
     right: 60px;
+    color: white;
   }
 
 /* ========================================= */

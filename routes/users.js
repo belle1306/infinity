@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const db = require("../model/helper");
+const db = require("../modal/helper");
 const bodyParser = require("body-parser");
 // const data = require("../data/planets.js");
 

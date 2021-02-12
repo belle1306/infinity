@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 // import Quiz from "../components/quiz";
 // import {Link} from "react-router-dom";
 // class GetLeaderBoard extends React.Component {
@@ -8,7 +8,7 @@
 // 					leaderboard: []
                     
 //     			}
-//     			this.getLeaderboard =this.getLeaderboard.bind(this);
+//     			this.getscore =this.getscore.bind(this);
 //     		}
             
     		
@@ -30,25 +30,35 @@
     
     	
 		
-function GetLeaderBoard(){
-			alert("getting score board")
-    		fetch("/users/quiz", {
-                method: "GET",
-                headers: {
+class GetLeaderBoard extends React.Component(){
+    constructor() {
+           	super()
+            this.state = {
+         	leaderboard: []}
+                            
+            
+        this.getscore =this.getscore.bind(this);
+    }
+
+	getscore(){
+    alert("getting score board")
+    	fetch("/users/quiz", {
+            method: "GET",
+            headers: {
                     "Content-Type": "application/json"
-                },
+            },
                 // body: JSON.stringify({
                 //     // user_id: this.state.value,
 				// 	score: this.state.input,
 				// 	userName : this.state.value
                 // })
-            })
-            .then(res => {
+        })
+        .then(res => {
                 res.json();
                 // this.componentDidMount();
                 //alert("Submitted");
             })
-            .then(data =>{
+        .then(data =>{
 				console.log(data);
 				this.setState({
 					leaderboard: data
@@ -57,8 +67,14 @@ function GetLeaderBoard(){
               .catch(error => {
                 console.log(error);
               })
-        
+    return(
+
+    <div>
+        {this.state.leaderboard}
+        </div>
+    )
+    }
     		             
-    		}
+}
 
 export default GetLeaderBoard;

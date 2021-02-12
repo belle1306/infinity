@@ -80,7 +80,7 @@ router.post("/message", function(req, res, next) {
   });
 
   router.get("/quiz/", (req, res, next) => {
-    console.log("getting quiz table")
+    console.log("getting quiz table again")
     db(`SELECT * FROM quiz ORDER BY score ASC;`)
         .then(results => res.send(results.data))
         .catch(res => res.status(500).send(err));

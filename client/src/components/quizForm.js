@@ -1,6 +1,7 @@
 import React from "react";
 // import Quiz from "../components/quiz";
 import {Link} from "react-router-dom";
+
 class QuizForm extends React.Component {
     		constructor() {
     			super()
@@ -16,7 +17,7 @@ class QuizForm extends React.Component {
     			this.handleInputScore = this.handleInputScore.bind(this);
     			this.handleUserName = this.handleUserName.bind(this);
     			this.submitScore = this.submitScore.bind(this);
-                this.getLeaderboard =this.getLeaderboard.bind(this);
+                // this.getLeaderboard =this.getLeaderboard.bind(this);
     		}
             
     		handleInputScore(e) {
@@ -93,35 +94,35 @@ class QuizForm extends React.Component {
 			 
 		}
 		
-		getLeaderboard(e){
-			alert("getting score board")
-    		fetch("/users/quiz", {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                // body: JSON.stringify({
-                //     // user_id: this.state.value,
-				// 	score: this.state.input,
-				// 	userName : this.state.value
-                // })
-            })
-            .then(res => {
-                res.json();
-                this.componentDidMount();
-                //alert("Submitted");
-            })
-            .then(data =>{
-				console.log(data);
-				this.setState({
-					userName :data,
-					score: data
-				})
-			})
-              .catch(error => {
-                console.log(error);
-              })
-        }
+		// getLeaderboard(e){
+		// 	alert("getting score board")
+    	// 	fetch("/users/quiz", {
+        //         method: "GET",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         // body: JSON.stringify({
+        //         //     // user_id: this.state.value,
+		// 		// 	score: this.state.input,
+		// 		// 	userName : this.state.value
+        //         // })
+        //     })
+        //     .then(res => {
+        //         res.json();
+        //         this.componentDidMount();
+        //         //alert("Submitted");
+        //     })
+        //     .then(data =>{
+		// 		console.log(data);
+		// 		this.setState({
+		// 			userName :data,
+		// 			score: data
+		// 		})
+		// 	})
+        //       .catch(error => {
+        //         console.log(error);
+        //       })
+        // }
     		render(){
                 
     		return (                      
@@ -156,6 +157,7 @@ class QuizForm extends React.Component {
     											>
     											Submit your score
     										</button>
+											
 											{/* <button 
     											id="messageButton" 
     											type="submit"

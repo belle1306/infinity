@@ -12,8 +12,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.21.1",
     "@babel/plugin-syntax-jsx": "^7.12.13",
+    "axios": "^0.21.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "deployment": "^0.2.3",

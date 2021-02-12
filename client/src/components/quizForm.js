@@ -5,16 +5,18 @@ class QuizForm extends React.Component {
     		constructor() {
     			super()
     			this.state = {
-    				value: "",
+					value: "",
+					userName : null,
     				user_id: null,
     				input: "",
-    				score: [],
+					score: [],
+					getLeaderboard: []
                     
     			}
     			this.handleInputScore = this.handleInputScore.bind(this);
-    			this.handleUserId = this.handleUserId.bind(this);
+    			this.handleUserName = this.handleUserName.bind(this);
     			this.submitScore = this.submitScore.bind(this);
-                
+                this.getLeaderboard =this.getLeaderboard.bind(this);
     		}
             
     		handleInputScore(e) {
@@ -25,7 +27,14 @@ class QuizForm extends React.Component {
                 
     		};
         
-    		handleUserId(e) {
+    		// handleUserId(e) {
+    		// 	e.preventDefault(); 
+    		// 	this.setState({
+    		// 		value: e.target.value,
+    		// 	});
+			// };
+			
+			handleUserName(e) {
     			e.preventDefault(); 
     			this.setState({
     				value: e.target.value,
@@ -37,7 +46,7 @@ class QuizForm extends React.Component {
     			.then(res => res.json())
     			.then(data => {
     				this.setState({
-    					user_id: data,
+    					userName: data,
     					score: data
     				})
     			})
@@ -55,8 +64,9 @@ class QuizForm extends React.Component {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    user_id: this.state.value,
-    				score: this.state.input
+                    // user_id: this.state.value,
+					score: this.state.input,
+					userName : this.state.value
                 })
             })
             .then(res => {
@@ -75,7 +85,39 @@ class QuizForm extends React.Component {
             //     ];
             //     this.setstate({ score: [...this.state.score, ...updatedScore] });
             //     console.log(this.state.score);
-            //   })
+			//   })
+	
+              .catch(error => {
+                console.log(error);
+			  });
+			 
+		}
+		
+		getLeaderboard(e){
+			alert("getting score board")
+    		fetch("/users/quiz", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                // body: JSON.stringify({
+                //     // user_id: this.state.value,
+				// 	score: this.state.input,
+				// 	userName : this.state.value
+                // })
+            })
+            .then(res => {
+                res.json();
+                this.componentDidMount();
+                //alert("Submitted");
+            })
+            .then(data =>{
+				console.log(data);
+				this.setState({
+					userName :data,
+					score: data
+				})
+			})
               .catch(error => {
                 console.log(error);
               })
@@ -88,12 +130,12 @@ class QuizForm extends React.Component {
     								<form>                                           
     								<br />
     								<div className="QuizForm">
-    									<label htmlFor="user ID">Your UserId</label>
+    									<label htmlFor="user name">Your User Name</label>
     									<div className="form-inputs">
     										<input
-    										defaultvalue={this.state.user_id}
+    										defaultvalue={this.state.userName}
     										type="text"
-    										onChange={e => this.handleUserId(e)}
+    										onChange={e => this.handleUserName(e)}
     										/>
     									</div>
     								</div> 
@@ -114,10 +156,56 @@ class QuizForm extends React.Component {
     											>
     											Submit your score
     										</button>
+											{/* <button 
+    											id="messageButton" 
+    											type="submit"
+    											onClick={e => this.getLeaderboard.map(e =>{
+													return(<li key ={e.userName} score ={e.score}/>)
+												})}
+    											>
+    											Get Leader Board
+    										</button> */}
     									</div>
     								</div>
-    								</form> 
-    						</div>
+    								</form>
+							</div>
+
+							
+							{/* <table className="leader board"> */}
+							{/* <button
+								id = "getLeaderboardButton"
+								type ="submit"
+								onClick={this.getLeaderboard.map(e =>{
+									return(<li key ={e.userName} score ={e.score}/>)
+								})} // i need to map?
+								>
+									Get Leader Board
+								</button> */}
+								{/* <select id="getLeaderBoard" value={this.state.userName} onChange={this.onChange}>
+                                {this.getLeaderboard.map((e) => {
+                                    return <option key={e.id} value={this.state.userName} score ={this.state.score}>{this.state.userName}</option>
+                                })}
+                            </select> */}
+
+								{/* {/* <thead>
+									<tr>
+									<th name = "col">Username</th>
+									<th score = "col">Score</th>
+									</tr>
+								</thead>
+								<tbody>
+									<td>
+								{/* {this.getLeaderboard.map(e =>{
+									return (<li key={e.userName} score={e.score}/>)
+								})}
+									 */}
+								
+									
+								
+								{/* </tbody>
+							</table> */}
+							
+
                             <Link to="/solarscope">
                                 <button className="submittedButton"
                                 type="submit">

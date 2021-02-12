@@ -32,21 +32,21 @@ describe("tests for App router"), () =>{
         // expect(wrapper.find(NotFoundPage)).toHaveLength(0);
       })
 ///initially i did the wrapper, then i try follow the article i send you...
-    // test("should render page three on default route"),()=>{
-    //     //this is to check the default route, if threehome renders
-    //     //the plan was to do the first 2 tests, default and the link to messageform...
-    //     //but still got syntax errors,as if it cant read jsx
-    //     ThreeHome.mockImplementation(() => <div>ThreeHomeMock</div>)
+    test("should render page three on default route"),()=>{
+        //this is to check the default route, if threehome renders
+        //the plan was to do the first 2 tests, default and the link to messageform...
+        //but still got syntax errors,as if it cant read jsx
+        ThreeHome.mockImplementation(() => <div>ThreeHomeMock</div>)
 
-    // render (
-    //     <MemoryRouter>
-    //         <Routes/>
-    //     </MemoryRouter>
-    // )
+    render (
+        <MemoryRouter>
+            <Routes/>
+        </MemoryRouter>
+    )
 
-    //     expect(screen.getByText("ThreeHomeMock")).toBeInTheDocument();
+        expect(screen.getByText("ThreeHomeMock")).toBeInTheDocument();
 
-    // }
+    }
 //     //this is to check messageform path
 //     test("should render page messageform"),()=>{
 

@@ -2,9 +2,16 @@
   "name": "infinityandbeyond",
   "jest": {
     "verbose": true,
-    "moduleDirectories": ["node_modules", "src"],
-    "testPathIgnorePatterns": ["/node_modules/"],
-    "transformIgnorePatterns": ["/node_modules/"]
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "version": "0.1.0",
   "private": true,
@@ -16,11 +23,12 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios-react": "^2.0.2",
     "bootstrap": "^4.6.0",
     "draco3d": "^1.4.1",
     "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.6.1",
     "enzyme-adapter-react-16.1": "^1.6.4",
+    "enzyme-to-json": "^3.6.1",
     "lerp": "^1.0.3",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",

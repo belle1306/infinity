@@ -16,22 +16,10 @@ import App from "./App";
 // import MessageSubmitted from "./components/messageSubmitted";
 // import ThreeHome from "./components/Three";
 // import {jest} from '@jest/globals';
-import {shallow} from "enzyme";
-import MessageSubmitted from "./components/messageSubmitted";
+import { shallow, mount, configure } from "enzyme";
+import Adapter from 'enzyme-adapter-react-16';
+configure({adapter: new Adapter()});
+it("renders without crashing",() =>{
+    shallow (<App/>)
+})
 
-describe("rendering components", () => {
-  // it("renders App component without crashing", () => {
-  //   let wrapper = shallow(<App />);
-  //   expect(wrapper.contains(<Routes />)).toEqual(true);
-  // });
-  it("renders MessageSubmitted component without crashing", () => {
-  test("renders MessageSubmitted component without crashing", () => {
-    const wrapper = shallow(<MessageSubmitted />);
-    const header =(<h2>It means 'thank you' in alien language!</h2>);
-    expect(wrapper.contains(header)).toEqual(true);
-  });
-  // it("renders button", () => {
-  //   const wrapper = mount(<MessageForm  )
-  // })
-})
-})

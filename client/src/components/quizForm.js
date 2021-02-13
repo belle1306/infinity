@@ -141,7 +141,7 @@ class QuizForm extends React.Component {
     									</div>
     								</div> 
     								<br />
-                        
+				
     								<div className="QuizForm">
     									<label htmlFor="score">Your Score</label>
     									<div className="form-inputs">
@@ -150,25 +150,24 @@ class QuizForm extends React.Component {
     										onChange={e => this.handleInputScore(e)}
     										/>
     										{/* <span id="charLimit">(150 characters limit)</span> */}
-    										<button 
+    										<span>
+											<button 
     											id="messageButton" 
     											type="submit"
     											onClick={e => this.submitScore(e)}
     											>
     											Submit your score
     										</button>
+											</span>
 											
-											{/* <button 
-    											id="messageButton" 
-    											type="submit"
-    											onClick={e => this.getLeaderboard.map(e =>{
-													return(<li key ={e.userName} score ={e.score}/>)
-												})}
-    											>
-    											Get Leader Board
-    										</button> */}
     									</div>
     								</div>
+									<Link to="/solarscope">
+                                <button className="submittedButton"
+                                type="submit">
+                                Learn more about the solar system here!
+                                </button>
+                            </Link>
     								</form>
 							</div>
 
@@ -207,13 +206,9 @@ class QuizForm extends React.Component {
 								{/* </tbody>
 							</table> */}
 							
-
-                            <Link to="/solarscope">
-                                <button className="submittedButton"
-                                type="submit">
-                                Learn more about the solar system here!
-                                </button>
-                            </Link>
+							
+                            
+							
     					</div>  
     				)
     			}

@@ -1,44 +1,16 @@
 import React from "react";
 // import Quiz from "../components/quiz";
 // import {Link} from "react-router-dom";
-// class GetLeaderBoard extends React.Component {
-//     		constructor() {
-//     			super()
-//     			this.state = {
-// 					leaderboard: []
+class GetLeaderBoard extends React.Component {
+    		constructor() {
+    			super()
+    			this.state = {
+					leaderboard: []
                     
-//     			}
-//     			this.getscore =this.getscore.bind(this);
-//     		}
-            
-    		
-			           
-//     		componentDidMount() {
-//                 alert("getting score board at mount")
-//     			fetch("/users")
-//     			.then(res => res.json())
-//     			.then(data => {
-//     				this.setState({
-//     					leaderboard : data
-//     				})
-//     			})
-//     			.catch(err => {
-//     				console.log(err);
-//     			});
-                
-//     		}
-    
-    	
-		
-class GetLeaderBoard extends React.Component(){
-    constructor() {
-           	super()
-            this.state = {
-         	leaderboard: []}
-                            
-            
-        this.getscore =this.getscore.bind(this);
-    }
+    			}
+    			this.getscore =this.getscore.bind(this);
+    		}
+
 
 	getscore(){
     alert("getting score board")
@@ -46,31 +18,28 @@ class GetLeaderBoard extends React.Component(){
             method: "GET",
             headers: {
                     "Content-Type": "application/json"
-            },
-                // body: JSON.stringify({
-                //     // user_id: this.state.value,
-				// 	score: this.state.input,
-				// 	userName : this.state.value
-                // })
+            }
         })
-        .then(res => {
-                res.json();
-                // this.componentDidMount();
-                //alert("Submitted");
-            })
-        .then(data =>{
-				console.log(data);
-				this.setState({
-					leaderboard: data
-				})
-			})
-              .catch(error => {
-                console.log(error);
+            .then((response) => {
+                console.log("res", response);
+                return response.json();
               })
-    return(
+              .then((data) => {
+                this.state.leaderboard = data;
+              })
+              .catch((err) => console.log(err))
+        
+    }
 
-    <div>
-        {this.state.leaderboard}
+    render()    {
+    return(
+     
+
+    <div><span>
+        <button
+        onClick= {this.getscore}>
+            Get Leader Board
+        </button></span>
         </div>
     )
     }

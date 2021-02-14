@@ -20,9 +20,6 @@ export default function Header() {
                 <li className='quiz'>
                   <a href='/quiz'>Astronomical Quiz</a>
                 </li>
-                {/* <li className='Message-surprise'>
-                  <a href='/MessageSurprise'>Message Surprise</a>
-                </li> */}
               </ul>
             </nav>
         </div>

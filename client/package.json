@@ -10,13 +10,20 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+<<<<<<< HEAD
     "axios-react": "^2.0.2",
+=======
+    "axios": "^0.21.1",
+>>>>>>> 5383d2491c20fb4078ce0964d74e8f0410885f48
     "bootstrap": "^4.6.0",
     "bootstrap-table": "^1.18.2",
     "draco3d": "^1.4.1",
     "enzyme": "^3.11.0",
+<<<<<<< HEAD
     "enzyme-adapter-react-15": "^1.4.3",
     "enzyme-adapter-react-16": "^1.15.6",
+=======
+>>>>>>> 5383d2491c20fb4078ce0964d74e8f0410885f48
     "enzyme-adapter-react-16.1": "^1.6.4",
     "enzyme-to-json": "^3.6.1",
     "lerp": "^1.0.3",
@@ -45,14 +52,19 @@
   "devDependencies": {
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
+<<<<<<< HEAD
     "babel-jest": "^26.6.3",
     "jest": "^26.6.3",
     "react-test-renderer": "^16.14.0"
+=======
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "react-test-renderer": "^17.0.1"
+>>>>>>> 5383d2491c20fb4078ce0964d74e8f0410885f48
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --verbose",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -47,6 +47,7 @@ class MessageText extends Component {
     render() {
         const { quote, author} = this.state
         return (
+            <div>
             <div id='wrapper'>
                 <div id="quote-box">
                     <QuoteBox quote={quote} author={author} /> 
@@ -62,6 +63,8 @@ class MessageText extends Component {
                     </button>
                 </Link>
                 </div>
+            </div>
+            
             </div>
         )
     }

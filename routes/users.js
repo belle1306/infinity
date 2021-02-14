@@ -3,18 +3,18 @@ var router = express.Router();
 const db = require("../model/helper");
 const bodyParser = require("body-parser");
 // const data = require("../data/planets.js");
+// var jwt = require("jsonwebtoken");
+// var userMustBeLogged = require("../guards/userMustBeLogged");
 
 router.use(bodyParser.json());
+
+
+
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('API working');
 });
-
-// GET planets from data folder 
-// router.get('/planets', function(req, res, next) {
-//   res.send(data);
-// });
 
 router.get("/planets", (req, res, next) => {
   db(`SELECT * FROM planet;`)
@@ -107,5 +107,9 @@ router.post("/message", function(req, res, next) {
     });
 
 //WHERE id= parseInt(req.params.id)
+
+
+
+//
 
 module.exports = router;

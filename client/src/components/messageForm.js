@@ -5,11 +5,9 @@ class MessageForm extends Component {
     constructor() {
         super()
         this.state = {
-            // name: "",
             input: "",
             message: [],
             value: "",
-            // options: ["Mercury", "Venus", "Earth"],
             options: [
                 {id: 1, name: "Mercury"}, 
                 {id: 2, name: "Venus"}, 
@@ -26,7 +24,8 @@ class MessageForm extends Component {
         // this.handleSelectChange = this.handleSelectChange.bind(this);
         this.handleInput = this.handleInput.bind(this)
         this.submitMessage = this.submitMessage.bind(this);
-    }
+
+    };
 
     onChange(e) {
         // const { value } = e.target;
@@ -36,7 +35,6 @@ class MessageForm extends Component {
             value: e.target.value
         });
     };
-
 
     handleInput(e) {
         e.preventDefault(); 
@@ -62,21 +60,6 @@ class MessageForm extends Component {
         console.log(err);
     });
     }
-
-    // show list of planets
-    // do i need it by id?
-    // getPlanets(id) {
-    //     fetch("/users/planets/" + id, {
-    //         method: "GET",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         }
-    //     })
-    //     .then(res => res.json())
-    //     .then(res => {
-    //         this.componentDidMount();
-    //     });
-    // }
 
     // submit message
     submitMessage() {
@@ -147,17 +130,6 @@ class MessageForm extends Component {
                             </select>
                             </div>
                             <br />
-                            {/* <div className="form-group">
-                                <label htmlFor="your name">Your name</label>
-                                <div className="form-inputs">
-                                    <input
-                                    name="name"
-                                    type="text"
-                                    value={this.state.name}
-                                    onChange={e => this.handleInputName(e)}
-                                    />
-                                </div>
-                            </div>  */}
                             <br />
                 
                             <div className="form-group">

@@ -28,11 +28,15 @@ class MessageForm extends Component {
         this.submitMessage = this.submitMessage.bind(this);
     }
 
-    onChange = e => {
+    onChange(e) {
         // const { value } = e.target;
         // alert(value);
-        this.setState({value: e.target.value})
-    }
+        e.preventDefault();
+        this.setState({
+            value: e.target.value
+        });
+    };
+
 
     handleInput(e) {
         e.preventDefault(); 
@@ -136,7 +140,7 @@ class MessageForm extends Component {
                             {/* <h2>Current Planet: {value}</h2> */}
                             <div className="form-inputs1">
                             <label htmlFor="options">Pick a planet!</label>
-                            <select id="options" value={value} onChange={this.onChange}>
+                            <select id="options" value={value} onChange={e => this.onChange(e)}>
                                 {options.map((planet) => {
                                     return <option key={planet.id} value={planet.id}>{planet.name}</option>
                                 })}

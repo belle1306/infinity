@@ -37,8 +37,8 @@ con.connect(function(err) {
 let sqlInsert = "INSERT INTO login(username, password) VALUES ('Khalilah97', 'lilahpassword97'), ('Isabelle', 'Goldilocks');"
   // + "INSERT INTO user(login_id, score, message_id) VALUES ('1', '5', 'Is it cold there?');"
   + "INSERT INTO planet (name) VALUES ('Mercury'), ('Venus'), ('Earth'), ('Mars'), ('Jupiter'), ('Saturn'), ('Uranus'), ('Neptune'), ('Pluto');"
-  + "INSERT INTO user (quiz_id, message_id, login_id) values ('1','1','2');"
-  // + "INSERT INTO quiz (user_id, score, name) values ('1','7', 'Thomas');";
+  + "INSERT INTO user (quiz_id, message_id, login_id) values ('1','1','2');";
+  // + "INSERT INTO quiz (user_id, score, name) values ('1','7', 'Thomas');"
  
 
   con.query(sql, function (err, result) {

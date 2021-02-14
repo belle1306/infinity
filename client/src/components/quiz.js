@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import QuizForm from '../components/quizForm';
-import GetLeaderBoard from '../components/getleaderboard';
+// import GetLeaderBoard from '../components/getleaderboard';
 
 	function Quiz(){
 		const questions = [
@@ -111,7 +111,7 @@ import GetLeaderBoard from '../components/getleaderboard';
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
 					<QuizForm />
-					<GetLeaderBoard/>
+					{/* <GetLeaderBoard/> */}
 					
 				</div>
 			) : (

@@ -1,5 +1,6 @@
 import React from "react";
 // import Quiz from "../components/quiz";
+// import GetLeaderBoard from '../components/getleaderboard';
 import {Link} from "react-router-dom";
 
 class QuizForm extends React.Component {
@@ -11,7 +12,7 @@ class QuizForm extends React.Component {
     				user_id: null,
     				input: "",
 					score: [],
-					getLeaderboard: []
+					
                     
     			}
     			this.handleInputScore = this.handleInputScore.bind(this);
@@ -75,54 +76,22 @@ class QuizForm extends React.Component {
                 // this.componentDidMount();
                 //alert("Submitted");
             })
-            // .then(data => {
-            //     //console.log("data with id", data);
-            //     const updatedScore = [
-            //       {
-            //         id: data.insertID,
-            //         user_id: this.state.value,
-    		// 		score: this.state.input
-            //       }
-            //     ];
-            //     this.setstate({ score: [...this.state.score, ...updatedScore] });
-            //     console.log(this.state.score);
-			//   })
-	
+            	
               .catch(error => {
                 console.log(error);
 			  });
 			 
 		}
 		
-		// getLeaderboard(e){
+		// getscore(){
 		// 	alert("getting score board")
-    	// 	fetch("/users/quiz", {
-        //         method: "GET",
-        //         headers: {
-        //             "Content-Type": "application/json"
-        //         },
-        //         // body: JSON.stringify({
-        //         //     // user_id: this.state.value,
-		// 		// 	score: this.state.input,
-		// 		// 	userName : this.state.value
-        //         // })
-        //     })
-        //     .then(res => {
-        //         res.json();
-        //         this.componentDidMount();
-        //         //alert("Submitted");
-        //     })
-        //     .then(data =>{
-		// 		console.log(data);
-		// 		this.setState({
-		// 			userName :data,
-		// 			score: data
-		// 		})
-		// 	})
-        //       .catch(error => {
-        //         console.log(error);
-        //       })
-        // }
+		// 		axios.get("/users/quiz")
+		// 				.then(({data}) => {
+		// 				this.setState({leaderboard:data})
+		// 				})
+		// 			  .catch((err) => console.log(err))
+		// 			}
+
     		render(){
                 
     		return (                      
@@ -165,7 +134,7 @@ class QuizForm extends React.Component {
 									<Link to="/solarscope">
                                 <button className="submittedButton"
                                 type="submit">
-                                Learn more about the solar system here!
+                                Learn more about solar system here!
                                 </button>
                             </Link>
     								</form>

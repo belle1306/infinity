@@ -5,11 +5,9 @@ class MessageForm extends Component {
     constructor() {
         super()
         this.state = {
-            // name: "",
             input: "",
             message: [],
             value: "",
-            // options: ["Mercury", "Venus", "Earth"],
             options: [
                 {id: 1, name: "Mercury"}, 
                 {id: 2, name: "Venus"}, 
@@ -26,13 +24,17 @@ class MessageForm extends Component {
         // this.handleSelectChange = this.handleSelectChange.bind(this);
         this.handleInput = this.handleInput.bind(this)
         this.submitMessage = this.submitMessage.bind(this);
-    }
 
-    onChange = e => {
+    };
+
+    onChange(e) {
         // const { value } = e.target;
         // alert(value);
-        this.setState({value: e.target.value})
-    }
+        e.preventDefault();
+        this.setState({
+            value: e.target.value
+        });
+    };
 
     handleInput(e) {
         e.preventDefault(); 
@@ -58,21 +60,6 @@ class MessageForm extends Component {
         console.log(err);
     });
     }
-
-    // show list of planets
-    // do i need it by id?
-    // getPlanets(id) {
-    //     fetch("/users/planets/" + id, {
-    //         method: "GET",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         }
-    //     })
-    //     .then(res => res.json())
-    //     .then(res => {
-    //         this.componentDidMount();
-    //     });
-    // }
 
     // submit message
     submitMessage() {
@@ -136,24 +123,13 @@ class MessageForm extends Component {
                             {/* <h2>Current Planet: {value}</h2> */}
                             <div className="form-inputs1">
                             <label htmlFor="options">Pick a planet!</label>
-                            <select id="options" value={value} onChange={this.onChange}>
+                            <select id="options" value={value} onChange={e => this.onChange(e)}>
                                 {options.map((planet) => {
                                     return <option key={planet.id} value={planet.id}>{planet.name}</option>
                                 })}
                             </select>
                             </div>
                             <br />
-                            {/* <div className="form-group">
-                                <label htmlFor="your name">Your name</label>
-                                <div className="form-inputs">
-                                    <input
-                                    name="name"
-                                    type="text"
-                                    value={this.state.name}
-                                    onChange={e => this.handleInputName(e)}
-                                    />
-                                </div>
-                            </div>  */}
                             <br />
                 
                             <div className="form-group">

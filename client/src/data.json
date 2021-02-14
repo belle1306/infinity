@@ -1,0 +1,13 @@
+{ "users": [
+    {
+        "full_name": "Khalilah Khalil",
+        "email": "khalilah@infinity.com",
+        "password": "infinity"
+    },
+    {
+        "full_name": "Isabelle",
+        "email": "Isabelle@infinity.com",
+        "password": "beyond"
+    }
+]
+}

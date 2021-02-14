@@ -78,12 +78,13 @@ export default function ThreeHome() {
       {/* <div className="layer" /> */}
       <Loading />
       <header>
-      <a href='/Quiz' className="top-left" children="Astronomical Quiz" />
-      {/* <a href='/MessageSurprise' children="Message Surprise" /> */}
-      <a href="/message" className="top-right" children="Message Aliens" />
-      <a href="/apod" className="bottom-left" children="Astronomical birthday" />
-      <a href="/solarscope" className="bottom-right" children="Explore Solar System" />
+      <a href="/solarscope" className="top-left" children="Explore Solar System" />
+      <a href='/Quiz' className="top-right" children="Astronomical Quiz" />
+      <a href="/message" className="bottom-right" children="Message Aliens" />
+      <a href="/apod" className="bottom-left" children="Astronomical Birthday" />
       </header>
+      <div>
+      </div>
     </>
   )
 }

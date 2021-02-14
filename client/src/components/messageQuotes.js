@@ -3,8 +3,6 @@ import * as THREE from "three";
 // import ReactDOM from "react-dom";
 import MessageText from "../components/messageText";
 
-
-
 export default class MessageQuotes extends Component {
     componentDidMount() {
         let scene = new THREE.Scene()
@@ -39,7 +37,7 @@ export default class MessageQuotes extends Component {
         // make a THREE.js loader
         const loader = new THREE.TextureLoader()
         loader.load(
-            "blue.jpg",
+            "i.png",
             this.onLoad,
             this.onProgress,
             this.onError
@@ -47,7 +45,7 @@ export default class MessageQuotes extends Component {
 
         // make planet 
         const makePlanet = function () {
-        const texture = loader.load("blue.jpg")
+        const texture = loader.load("i.png")
         const geometry = new THREE.SphereGeometry(600, 128, 128)
         const material = new THREE.MeshLambertMaterial({
         //     color: 0x2727e6,
@@ -57,7 +55,8 @@ export default class MessageQuotes extends Component {
         scene.add(mesh)
         return mesh
         }
-        
+
+        // make stars
         const makeStars = function (url, maxNum) {
         const texture = loader.load(url)
         const geometry = new THREE.Geometry()
@@ -177,7 +176,7 @@ export default class MessageQuotes extends Component {
     render() {
         return (
             <div>
-                <h3 className="title">The purpose of this website is to inspire others to reach beyond their imagination. Fly high, to infinity and beyond!</h3>
+                <h3 className="title">The purpose of this website is to inspire others to reach beyond their imagination. To know that the sky is not your limit. Be brave, be curious, fly high to infinity and beyond!</h3>
                 <h5>Click the button below to get inspired ✨ 🚀</h5>
                 <div ref ={ref => (this.mount = ref)}></div>
                 <div>

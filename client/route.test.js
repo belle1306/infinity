@@ -13,7 +13,7 @@ import ThreeHome from '../components/Three';
 // import { ExpectationFailed } from 'http-errors';
 
 // jest.mock('./components/messageForm');
-jest.mock('../components/Three');
+// jest.mock('../components/Three');
 // jest.mock('./components/apod');
 // jest.mock('./components/solarscope');
 // jest.mock('./components/quiz');

@@ -1,11 +1,5 @@
 {
   "name": "infinityandbeyond",
-  "jest": {
-    "verbose": true,
-    "moduleDirectories": ["node_modules", "src"],
-    "testPathIgnorePatterns": ["/node_modules/"],
-    "transformIgnorePatterns": ["/node_modules/"]
-  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,11 +10,12 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "draco3d": "^1.4.1",
     "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.6.1",
     "enzyme-adapter-react-16.1": "^1.6.4",
+    "enzyme-to-json": "^3.6.1",
     "lerp": "^1.0.3",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
@@ -48,13 +43,13 @@
   "devDependencies": {
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
-    "babel-jest": "^26.6.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "react-test-renderer": "^17.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --verbose",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

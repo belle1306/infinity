@@ -6,6 +6,7 @@ import APOD from './components/apod';
 import solarscope from './components/solarscope';
 import QuizForm from './components/quiz';
 import MessageQuotes from './components/messageQuotes';
+import GetLeaderBoard from './components/getleaderboard';
 
 
 
@@ -19,6 +20,7 @@ class Routes extends Component {
                 <Route path="/quiz" component={QuizForm} />
                 <Route path="/messageQuotes" component={MessageQuotes} />
                 {/* <Route path="/" component={Home} /> */}
+                <Route path="/getleaderboard" component={GetLeaderBoard}/>
                 <Route path="/" component={ThreeHome} />
                 <Route path="/home" component={ThreeHome} />
                 

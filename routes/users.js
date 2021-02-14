@@ -80,23 +80,24 @@ router.post("/message", function(req, res, next) {
   });
 
   router.get("/quiz/", (req, res, next) => {
-    db(`SELECT * FROM quiz ORDER BY id ASC;`)
+    console.log("getting quiz table again and AGAIN")
+    db(`SELECT * FROM quiz ORDER BY score ASC;`)
         .then(results => res.send(results.data))
         .catch(res => res.status(500).send(err));
   
   });
 
   router.post("/quiz/", function(req, res, next) {
-    let newUserId = req.body.user_id;
+    let newUserName = req.body.userName;
     let newScore = req.body.score;
-    console.log("printing", newUserId, newScore,);
+    console.log("printing", newUserName, newScore,);
     // let sql=db(`INSERT INTO quiz(user_id, score) VALUES (${JSON.stringify(newUserId)}, ${JSON.stringify(newScore)});`)
     // .then(results => {
     //   res.send(results);
     //   console.log("Successfully added");
     // })
     // console.log(sql);
-    db(`INSERT INTO quiz(user_id, score) VALUES (${JSON.stringify(newUserId)}, ${JSON.stringify(newScore)});`)
+    db(`INSERT INTO quiz(user_id, name, score) VALUES (1, ${JSON.stringify(newUserName)}, ${JSON.stringify(newScore)});`)
       .then(results => {
         res.send(results);
         console.log("Successfully added");

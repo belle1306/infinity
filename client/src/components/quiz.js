@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import QuizForm from '../components/quizForm';
+// import GetLeaderBoard from '../components/getleaderboard';
 
 	function Quiz(){
 		const questions = [
@@ -100,12 +101,18 @@ import QuizForm from '../components/quizForm';
 			setShowScore(true);
 		}
 	};
+
+	
+
+	
 	return (
 		<div className='quiz'>
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
 					<QuizForm />
+					{/* <GetLeaderBoard/> */}
+					
 				</div>
 			) : (
 				<>

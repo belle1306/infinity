@@ -1,4 +1,5 @@
 import React from "react";
+
 // import ReactDOM from "react-dom";
 
 // import "./styles.css";
@@ -29,6 +30,12 @@ function solarscope() {
       <Iframe iframe={demos["solar"]} allow="autoplay" />,
     </div>
   );
+  // <Link to="/ThreeHome">
+  //                   <button className="submittedButton"
+  //                   type="submit">
+  //                   Back to Home
+  //                   </button>
+  //               </Link>
 }
 
 // const rootElement = document.getElementById("root");
